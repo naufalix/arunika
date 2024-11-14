@@ -15,9 +15,11 @@
 
   <!-- Vendor CSS Files -->
   {{-- <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css"> --}}
-  <link rel="stylesheet" href="/assets/vendor/bootstrap-icons/bootstrap-icons.css">
   <link rel="stylesheet" href="/assets/vendor/aos/aos.css">
+  <link rel="stylesheet" href="/assets/vendor/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="/assets/vendor/font-awesome/css/font-awesome.min.css"/>
   <link rel="stylesheet" href="/assets/vendor/mdb/css/mdb.min.css" />
+  <link rel="stylesheet" href="/assets/vendor/leaflet/leaflet.css" />
 
 
   {{-- <link rel="stylesheet" href="/assets/vendor/swiper/swiper-bundle.min.css">
@@ -28,6 +30,7 @@
 
   <!-- jQuery -->
   <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/vendor/leaflet/leaflet.js"></script>
 
   <style>
     
