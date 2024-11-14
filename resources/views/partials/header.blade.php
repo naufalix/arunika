@@ -8,7 +8,7 @@
     
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <i class="text-white fa fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
@@ -36,14 +36,14 @@
       </div>
     </div>
   </nav>
-
+  
   <style>
     .bg-nav {
       background: transparent !important;
       transition: 0.2s ease-in;
     }
     .bg-nav.scrolled {
-      background: #999 !important;
+      background: #021526 !important;
       box-shadow: var(--mdb-navbar-box-shadow);
     }
     .nav-link{
@@ -51,10 +51,18 @@
       color: white;
       margin: 0px 4px;
     }
+    .navbar-toggler {
+      display: none;
+    }
+    @media (max-width: 992px) {
+      .bg-nav.scrolled .navbar-toggler {
+        display: block;
+      }
+    }
   </style>
 
   <script>
     $(window).scroll(function(){
-  $('nav').toggleClass('scrolled', $(this).scrollTop() > 100);
-  });
+      $('nav').toggleClass('scrolled', $(this).scrollTop() > 100);
+      });
   </script>
