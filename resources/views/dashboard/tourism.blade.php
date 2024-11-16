@@ -21,6 +21,7 @@
               <th>No.</th>
               <th style="min-width: 150px">Nama</th>
               <th style="min-width: 100px">Maps</th>
+              <th>Virtual</th>
               <th style="min-width: 120px">Kota</th>
               <th style="min-width: 120px">Terakhir diubah</th>
               <th style="min-width: 90px">Action</th>
@@ -45,11 +46,17 @@
                 </a>
               </td>
               <td>
+                <div class="symbol symbol-30px me-5" data-bs-toggle="modal" data-bs-target="#fotovr" onclick="fotovr('{{ $t->virtual }}')">
+                  <img src="/assets/img/virtual/{{ $t->virtual }}" class="h-30 align-self-center of-cover rounded-0" alt="">
+                </div>
+              </td>
+              <td>
                 <span class="btn btn-primary py-1 px-2 fs-7">{{ $t->city->name }}</span>
               </td>
               <td>{{date_format($updated,"d/m/Y H:i")}}</td>
               <td>
                 <a href="#" class="btn btn-icon btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#edit" onclick="edit({{ $t->id }})"><i class="bi bi-pencil-fill"></i></a>
+                <a href="#" class="btn btn-icon btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#virtual" onclick="virtual({{ $t->id }})"><i class="bi bi-image"></i></a>
                 <a href="#" class="btn btn-icon btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#hapus" onclick="hapus({{ $t->id }})"><i class="fa fa-times"></i></a>
               </td>
             </tr>
@@ -83,7 +90,7 @@
               <input type="text" class="form-control" name="name" required>
             </div>
             <div class="col-12 col-md-6">
-              <label class="required fw-bold mb-2">Foto 360°</label>
+              <label class="required fw-bold mb-2">Foto</label>
               <input type="file" class="form-control" name="image" required>
             </div>
             <div class="col-12 col-md-8">
@@ -129,7 +136,7 @@
                 <input type="text" class="form-control" name="name" required>
               </div>
               <div class="col-12 col-md-6">
-                <label class="required fw-bold mb-2">Upload Foto 360°</label>
+                <label class="required fw-bold mb-2">Upload Foto</label>
                 <input type="file" class="form-control" name="image">
               </div>
               <div class="col-12 col-md-8">
@@ -149,6 +156,35 @@
           <div class="modal-footer">
             <button type="reset" class="btn btn-light me-3" data-bs-dismiss="modal">Batal</button>
             <button type="submit" class="btn btn-primary" name="submit" value="update">Simpan</button>
+          </div>
+        </form>
+      </div>
+  </div>
+</div>
+
+<div class="modal fade" tabindex="-1" id="virtual">
+  <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="vt">Edit Virtual 360</h3>
+          <div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal" aria-label="Close">
+            <i class="bi bi-x-lg"></i>
+          </div>
+        </div>
+        <form class="form" method="post" action="" enctype="multipart/form-data">
+          @csrf
+          <input type="hidden" id="vid" name="id">
+          <div class="modal-body">
+            <div class="row g-9">
+              <div class="col-12">
+                <label class="required fw-bold mb-2">Upload Foto 360°</label>
+                <input type="file" class="form-control" name="virtual">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="reset" class="btn btn-light me-3" data-bs-dismiss="modal">Batal</button>
+            <button type="submit" class="btn btn-primary" name="submit" value="virtual">Simpan</button>
           </div>
         </form>
       </div>
@@ -195,11 +231,29 @@
       </div>
   </div>
 </div>
+<div class="modal fade" tabindex="-1" id="fotovr">
+  <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">View image</h3>
+          <div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal" aria-label="Close">
+            <i class="bi bi-x-lg"></i>
+          </div>
+        </div>
+        <div class="modal-body">
+          <img id="vr-view" src="" style="width:100%">
+        </div>
+      </div>
+  </div>
+</div>
 
 <script type="text/javascript">
 
   function foto(image){
     $("#img-view").attr("src","/assets/img/tourism/"+image);
+  }
+  function fotovr(image){
+    $("#vr-view").attr("src","/assets/img/virtual/"+image);
   }
   function edit(id){
     $.ajax({
@@ -215,6 +269,9 @@
         $("#et").text("Edit "+mydata.name);
       }
     });
+  }
+  function virtual(id){
+    $('#virtual input[name="id"]').val(id);
   }
   function hapus(id){
     $.ajax({

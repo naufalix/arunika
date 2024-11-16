@@ -31,6 +31,10 @@ class DashTourism extends Controller
             $res = $this->update($request);
             return back()->with($res['status'],$res['message']);
         }
+        if($request->submit=="virtual"){
+            $res = $this->virtual($request);
+            return back()->with($res['status'],$res['message']);
+        }
         if($request->submit=="destroy"){
             $res = $this->destroy($request);
             return back()->with($res['status'],$res['message']);
@@ -136,6 +140,43 @@ class DashTourism extends Controller
             $tourism->update($validatedData);    
             return ['status'=>'success','message'=>'Destinasi wisata berhasil diedit'];
         }
+        
+    }
+    
+    public function virtual(Request $request){
+        $validatedData = $request->validate([
+            'id'=>'required|numeric',
+            'virtual' => 'required|image|file|max:4096',
+        ]);
+        
+        $tourism = Tourism::find($request->id);
+
+        //Check if the tourism is found
+        if(!$tourism){
+            return ['status'=>'error','message'=>'Destinasi wisata tidak ditemukan'];
+        }
+
+        // Delete old image
+        $image_path = public_path() . '/assets/img/virtual/' . $tourism->virtual;
+        if (is_file($image_path) && file_exists($image_path)) {
+            unlink($image_path); // Delete the image file
+        }
+        
+        //Read image
+        $manager = new ImageManager(new Driver());
+        $image = $manager->read($request->file('virtual'));
+
+        //Convert to .webp
+        $imageWebp = $image->toWebp(100);
+        
+        // Upload new image
+        $validatedData['virtual'] = $validatedData['id'].'-'.time().".webp";
+        $imageWebp->save('assets/img/virtual/'.$validatedData['virtual']);
+        
+        $tourism->update($validatedData);
+        return ['status'=>'success','message'=>'Destinasi wisata berhasil diupdate'];
+            
+    
         
     }
 
