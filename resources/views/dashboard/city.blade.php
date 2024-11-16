@@ -21,7 +21,7 @@
               <th>No.</th>
               <th style="min-width: 150px">Nama kota</th>
               <th style="min-width: 300px">Deskripsi</th>
-              <th>Koordinat</th>
+              <th style="min-width: 120px">Koordinat</th>
               <th style="min-width: 100px">Data</th>
               <th style="min-width: 120px">Terakhir diubah</th>
               <th style="min-width: 90px">Action</th>

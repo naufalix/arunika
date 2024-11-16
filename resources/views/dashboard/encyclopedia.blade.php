@@ -19,10 +19,10 @@
           <thead>
             <tr class="fw-bold fs-6 text-gray-800 border-bottom border-gray-200">
               <th>No.</th>
-              <th style="min-width: 150px">Judul</th>
+              <th style="min-width: 250px">Judul</th>
               <th style="min-width: 300px">Deskripsi</th>
               <th style="min-width: 100px">Kota</th>
-              <th style="min-width: 100px">Sumber</th>
+              <th style="min-width: 60px">Sumber</th>
               <th style="min-width: 120px">Terakhir diubah</th>
               <th style="min-width: 90px">Action</th>
             </tr>
@@ -41,14 +41,14 @@
                 {{ $e->title }}  
               </td>
               <td>
-                {{ strlen($e->description) > 100 ? substr($e->description, 0, 100) . '...' : $e->description }}
+                {{ strlen($e->description) > 80 ? substr($e->description, 0, 80) . '...' : $e->description }}
               </td>
               <td>
                 <span class="btn btn-primary py-1 px-2 fs-7">{{ $e->city->name }}</span>
               </td>
               <td>
-                <a target="_blank" href="{{ $e->source }}" class="btn btn-primary py-1 px-2 fs-7">
-                  <i class="fa fa-globe"></i> Internet
+                <a target="_blank" href="{{ $e->source }}" class="btn btn-icon btn-sm btn-primary py-1 px-2 fs-7">
+                  <i class="mdi mdi-link-variant"></i>
                 </a>
               </td>
               <td>{{date_format($updated,"d/m/Y H:i")}}</td>

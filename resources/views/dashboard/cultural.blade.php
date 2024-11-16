@@ -19,13 +19,13 @@
           <thead>
             <tr class="fw-bold fs-6 text-gray-800 border-bottom border-gray-200">
               <th>No.</th>
-              <th style="min-width: 150px">Judul</th>
+              <th style="min-width: 200px">Judul</th>
               <th style="min-width: 200px">Tempat</th>
-              <th style="min-width: 200px">Kota</th>
-              <th style="min-width: 120px">Tanggal</th>
-              <th style="min-width: 100px">Harga</th>
-              <th style="min-width: 120px">Terakhir diubah</th>
-              <th style="min-width: 90px">Action</th>
+              <th>Kota</th>
+              <th style="width: 115px">Tanggal</th>
+              <th style="width: 80px">Harga</th>
+              <th style="width: 120px">Terakhir diubah</th>
+              <th style="width: 90px">Action</th>
             </tr>
           </thead>
           <tbody>
