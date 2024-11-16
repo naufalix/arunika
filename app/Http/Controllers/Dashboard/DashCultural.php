@@ -14,7 +14,7 @@ class DashCultural extends Controller
 {
 
     public function index(){
-        return view('dashboard.Cultural',[
+        return view('dashboard.cultural',[
             "title" => "Dashboard | Agenda Budaya",
             "culturals" => Cultural::orderBy("id","DESC")->get(),
             "cities" => City::orderBy("name","ASC")->get(),
