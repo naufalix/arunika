@@ -34,7 +34,12 @@
             @endphp
             <tr>
               <td>{{$loop->iteration}}</td>
-              <td>{{ $c->name }}</td>
+              <td>
+                <div class="symbol symbol-30px me-5" data-bs-toggle="modal" data-bs-target="#foto" onclick="foto('{{ $c->image }}')">
+                  <img src="/assets/img/city/{{ $c->image }}" class="h-30 align-self-center of-cover rounded-0" alt="">
+                </div>
+                {{ $c->name }}  
+              </td>
               <td>
                 {{ strlen($c->description) > 100 ? substr($c->description, 0, 100) . '...' : $c->description }}
               </td>
@@ -74,19 +79,23 @@
         </div>
       </div>
 
-      <form class="form" method="post" action="">
+      <form class="form" method="post" action="" enctype="multipart/form-data">
         @csrf
         <div class="modal-body">
           <div class="row g-9">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-4">
               <label class="required fw-bold mb-2">Nama kota</label>
               <input type="text" class="form-control" name="name" required>
             </div>
-            <div class="col-6 col-md-3">
+            <div class="col-12 col-md-4">
+              <label class="required fw-bold mb-2">Upload logo</label>
+              <input type="file" class="form-control" name="image" required>
+            </div>
+            <div class="col-6 col-md-2">
               <label class="required fw-bold mb-2">Latitude</label>
               <input type="text" class="form-control" name="latitude" required>
             </div>
-            <div class="col-6 col-md-3">
+            <div class="col-6 col-md-2">
               <label class="required fw-bold mb-2">Longitude</label>
               <input type="text" class="form-control" name="longitude" required>
             </div>
@@ -127,20 +136,24 @@
             <i class="bi bi-x-lg"></i>
           </div>
         </div>
-        <form class="form" method="post" action="">
+        <form class="form" method="post" action="" enctype="multipart/form-data">
           @csrf
           <input type="hidden" id="eid" name="id">
           <div class="modal-body">
             <div class="row g-9">
-              <div class="col-12 col-md-6">
+              <div class="col-12 col-md-4">
                 <label class="required fw-bold mb-2">Nama kota</label>
                 <input type="text" class="form-control" name="name" required>
               </div>
-              <div class="col-6 col-md-3">
+              <div class="col-12 col-md-4">
+                <label class="required fw-bold mb-2">Upload logo</label>
+                <input type="file" class="form-control" name="image">
+              </div>
+              <div class="col-6 col-md-2">
                 <label class="required fw-bold mb-2">Latitude</label>
                 <input type="text" class="form-control" name="latitude" required>
               </div>
-              <div class="col-6 col-md-3">
+              <div class="col-6 col-md-2">
                 <label class="required fw-bold mb-2">Longitude</label>
                 <input type="text" class="form-control" name="longitude" required>
               </div>
@@ -196,7 +209,26 @@
   </div>
 </div>
 
+<div class="modal fade" tabindex="-1" id="foto">
+  <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="ft">View image</h3>
+          <div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal" aria-label="Close">
+            <i class="bi bi-x-lg"></i>
+          </div>
+        </div>
+        <div class="modal-body d-flex">
+          <img class="mx-auto" id="img-view" src="" style="height:100%">
+        </div>
+      </div>
+  </div>
+</div>
+
 <script type="text/javascript">
+  function foto(image){
+    $("#img-view").attr("src","/assets/img/city/"+image);
+  }
 
   function edit(id){
     $.ajax({
