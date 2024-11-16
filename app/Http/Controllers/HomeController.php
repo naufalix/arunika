@@ -9,7 +9,7 @@ class HomeController extends Controller
 
     public function index(){
         return view('home',[
-            "city" => Division::orderBy('id', 'ASC')->get(),
+            "cities" => City::orderBy('id', 'ASC')->get(),
             //"testimonials" => Testimonial::orderBy('updated_at', 'DESC')->get(),
         ]);
     }
