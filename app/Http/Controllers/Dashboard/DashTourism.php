@@ -45,6 +45,7 @@ class DashTourism extends Controller
     public function store(Request $request){
         $validatedData = $request->validate([
             'city_id'=>'required',
+            'category'=>'required',
             'name'=>'required',
             'maps'=>'required',
             'image' => 'required|image|file|max:1024',
@@ -85,6 +86,7 @@ class DashTourism extends Controller
         $validatedData = $request->validate([
             'id'=>'required|numeric',
             'city_id'=>'required',
+            'category'=>'required',
             'name'=>'required',
             'maps'=>'required',
             'image' => 'image|file|max:1024',

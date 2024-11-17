@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('city_id');
             $table->foreign('city_id')->references('id')->on('cities')->onUpdate('cascade')->onDelete('cascade');
             $table->string('name');
+            $table->string('category');
             $table->string('maps');
             $table->string('image');
             $table->string('virtual');

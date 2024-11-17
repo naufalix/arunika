@@ -20,6 +20,7 @@
             <tr class="fw-bold fs-6 text-gray-800 border-bottom border-gray-200">
               <th>No.</th>
               <th style="min-width: 150px">Nama</th>
+              <th>Kategori</th>
               <th style="min-width: 100px">Maps</th>
               <th>Virtual</th>
               <th style="min-width: 120px">Kota</th>
@@ -40,6 +41,7 @@
                 </div>
                 {{ $t->name }}  
               </td>
+              <td>{{ $t->category }}</td>
               <td>
                 <a target="_blank" href="{{ $t->maps }}" class="btn btn-white py-1 px-2 fs-7" style="border: 1px solid #E4E6EF;">
                   <img src="/assets/img/gmaps.png" style="width:16px; margin: -1px 2px 0px 0px;"> Google Maps
@@ -85,11 +87,15 @@
         @csrf
         <div class="modal-body">
           <div class="row g-9">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-4">
               <label class="required fw-bold mb-2">Nama tempat</label>
               <input type="text" class="form-control" name="name" required>
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-4">
+              <label class="required fw-bold mb-2">Kategori</label>
+              <input type="text" class="form-control" name="category" required>
+            </div>
+            <div class="col-12 col-md-4">
               <label class="required fw-bold mb-2">Foto</label>
               <input type="file" class="form-control" name="image" required>
             </div>
@@ -131,12 +137,16 @@
           <input type="hidden" id="eid" name="id">
           <div class="modal-body">
             <div class="row g-9">
-              <div class="col-12 col-md-6">
+              <div class="col-12 col-md-4">
                 <label class="required fw-bold mb-2">Nama tempat</label>
                 <input type="text" class="form-control" name="name" required>
               </div>
-              <div class="col-12 col-md-6">
-                <label class="required fw-bold mb-2">Upload Foto</label>
+              <div class="col-12 col-md-4">
+                <label class="required fw-bold mb-2">Kategori</label>
+                <input type="text" class="form-control" name="category" required>
+              </div>
+              <div class="col-12 col-md-4">
+                <label class="fw-bold mb-2">Upload Foto</label>
                 <input type="file" class="form-control" name="image">
               </div>
               <div class="col-12 col-md-8">
@@ -265,6 +275,7 @@
         $('#edit input[name="id"]').val(id);
         $('#edit input[name="name"]').val(mydata.name);
         $('#edit input[name="maps"]').val(mydata.maps);
+        $('#edit input[name="category"]').val(mydata.category);
         $('#edit select[name="city_id"]').val(mydata.city_id);
         $("#et").text("Edit "+mydata.name);
       }
