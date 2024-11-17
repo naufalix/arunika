@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="/assets/vendor/font-awesome/css/font-awesome.min.css"/>
   <link rel="stylesheet" href="/assets/vendor/mdb/css/mdb.min.css" />
   <link rel="stylesheet" href="/assets/vendor/leaflet/leaflet.css" />
+  <link rel="stylesheet" href="/assets/vendor/pannellum/pannellum.css" />
   <link rel="stylesheet" href="/assets/vendor/swiper/swiper-bundle.min.css" />
 
 

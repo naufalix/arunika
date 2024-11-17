@@ -104,20 +104,6 @@
                           </div>
                         </div>
                       </div>
-                      {{-- <div class="swiper-slide">
-                        <div class="row p-2">
-                          <div class="col-12 col-md-6 detail my-auto">
-                            <p class="mb-0">{{ $cu->name }}</p>
-                            <p class="mb-0">{{ $cu->date }}</p>
-                            <p class="mb-0">{{ $cu->place }}</p>
-                            <p class="mb-0">{{ $cu->price }}</p>
-                            <p class="mb-0">Semua Umur</p>
-                          </div>
-                          <div class="col-12 col-md-6 d-flex">
-                            <img src="/assets/img/cultural/{{ $cu->image }}" class="m-auto rounded-3" alt="">
-                          </div>
-                        </div>
-                      </div>      --}}
                       @endforeach
                     </div>
                   </div>
@@ -214,6 +200,7 @@
                 <div class="col-12 col-md-7 text-center text-md-start">
                   <h3 class="my-4">{{ $e->title }}</h3>
                   <p>{{ $e->description }}</p>
+                  <button type="button" class="btn btn-sm btn-primary mb-2">Lihat selengkapnya</button>
                 </div>
               </div>
             </div>

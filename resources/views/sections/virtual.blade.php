@@ -90,16 +90,18 @@
           }
         </style>
         <div class="swiper-slide swiper-slide-{{ $t->id }}">
-          <span>{{ $t->category }}</span>
-          <div>
-            <h2>{{ $t->name }}</h2>
-            <p>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-              </svg>
-              {{ $t->city->name }}
-            </p>
+          <div data-mdb-modal-init data-mdb-target="#modal-vr" style="cursor: pointer" onclick="setvr('{{ $t->virtual }}','{{ $t->maps }}')">
+            <span>{{ $t->category }}</span>
+            <div>
+              <h2>{{ $t->name }}</h2>
+              <p>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                </svg>
+                {{ $t->city->name }}
+              </p>
+            </div>
           </div>
         </div>
         @endforeach
@@ -111,3 +113,45 @@
     
   </div>
 </section>
+
+<style>
+ 
+    #panorama {
+      height: 400px;
+    }
+    #modal-vr .btn-close{
+      position: absolute;
+      right: 0;
+      z-index: 2;
+    }
+    #modal-vr .gmaps{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+      font-size: 10px;
+      color: white;
+      background: #00000050;
+    }
+    #modal-vr .vr-close{
+      position: absolute;
+      right: 0;
+      z-index: 2;
+      color: white;
+      background: #00000050;
+    }
+</style>
+
+<!-- Modal -->
+<div class="modal fade" id="modal-vr" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+        {{-- <button type="button" class="btn-close p-2" data-mdb-dismiss="modal" aria-label="Close"></button> --}}
+        <a class="btn-icon px-2 py-1 vr-close" data-mdb-dismiss="modal"><i class="bi bi-x-lg"></i></a>
+        <a class="gmaps px-2 py-1" href="" target="_blank">View on google maps</a>
+        <div id="panorama"></div>
+      </div>
+    </div>
+  </div>
+</div>

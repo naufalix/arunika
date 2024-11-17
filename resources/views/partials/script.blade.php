@@ -3,18 +3,20 @@
 <script src="/assets/vendor/mdb/js/mdb.umd.min.js"></script>
 <script src="/assets/vendor/leaflet/leaflet.js"></script>
 <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="/assets/vendor/pannellum/pannellum.js"></script>
 
 <!-- Main JS File -->
 <script src="/assets/js/script.js"></script>
 
 <script>
-  // initialize the map on the "map" div with a given center and zoom
+  
+  // Initialize leaflet
   var map = L.map('map', {
-      center: [-2.2, 118],
-      zoom: 4.0
+    center: [-2.2, 118],
+    zoom: 4.0
   });
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
 
   // Marker
@@ -22,27 +24,13 @@
   var {{ $c->name }} = L.marker([{{ $c->latitude }}, {{ $c->longitude }}]).addTo(map).bindPopup("<b>{{ $c->name }}</b><br><br><button class='btn btn-sm btn-primary'>Pergi</button>");
   @endforeach
 
-  //Initialize Swiper
+  // Initialize Swiper
   var swiper = new Swiper(".mySwiper", {
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
   });
-  // var swiper2 = new Swiper(".mySwiper2", {
-  //   navigation: {
-  //     nextEl: ".swiper2-next",
-  //     prevEl: ".swiper2-prev",
-  //   },
-  // });
-  // var swiper3 = new Swiper(".mySwiper3", {
-  //     slidesPerView: 3,
-  //     spaceBetween: 30,
-  //     pagination: {
-  //       el: ".swiper-pagination",
-  //       clickable: true,
-  //     },
-  //   });
   var swiper2 = new Swiper(".mySwiper2", {
     effect: "coverflow",
     grabCursor: true,
@@ -68,4 +56,12 @@
       clickable: true
     }
   });
+
+  function setvr(virtual,maps){
+    pannellum.viewer('panorama', {
+      "type": "equirectangular",
+      "panorama": "/assets/img/virtual/"+virtual
+    });
+    $('.gmaps').attr('href', maps);
+  }
 </script>
