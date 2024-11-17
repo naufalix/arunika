@@ -148,7 +148,7 @@ class DashTourism extends Controller
     public function virtual(Request $request){
         $validatedData = $request->validate([
             'id'=>'required|numeric',
-            'virtual' => 'required|image|file|max:4096',
+            'virtual' => 'required|image|file|max:5120',
         ]);
         
         $tourism = Tourism::find($request->id);
@@ -164,16 +164,9 @@ class DashTourism extends Controller
             unlink($image_path); // Delete the image file
         }
         
-        //Read image
-        $manager = new ImageManager(new Driver());
-        $image = $manager->read($request->file('virtual'));
-
-        //Convert to .webp
-        $imageWebp = $image->toWebp(100);
-        
         // Upload new image
-        $validatedData['virtual'] = $validatedData['id'].'-'.time().".webp";
-        $imageWebp->save('assets/img/virtual/'.$validatedData['virtual']);
+        $validatedData['virtual'] = $validatedData['id'].'-'.time().".jpg";
+        $request->file('virtual')->move(public_path('assets/img/virtual'), $validatedData['virtual']);
         
         $tourism->update($validatedData);
         return ['status'=>'success','message'=>'Destinasi wisata berhasil diupdate'];
