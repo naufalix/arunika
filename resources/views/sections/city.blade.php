@@ -9,12 +9,24 @@
   #city .img-thumb:hover {
     transform: scale(1.1); /* Membesarkan gambar saat di-hover */
   }
+  #city .img-thumb:hover .custom-bg.bg-1{
+    width: 25% !important;
+  }
+  #city .img-thumb:hover .bg-2{
+    width: 20% !important;
+    left: 12% !important;
+  }
   #city .img-thumb img{
     width: 100%; object-fit: cover;
   }
+  #city .custom-bg{
+    position: absolute;
+    height: -webkit-fill-available;
+    transition: all ease-in-out 0.4s;
+  }
   .tag {
     cursor: pointer;
-    align-content: end;
+    align-content: center;
     width: 100%;
     height: 100%;
     float: left;
@@ -22,37 +34,28 @@
     left: 0px;
     top: 0px;
     z-index: 1000;
-    background: linear-gradient(to bottom, transparent, #3B71CA);
+    /* background: linear-gradient(to bottom, transparent, #3B71CA); */
     padding: 12px;
     color: #FFFFFF;
     font-weight: bold;
   }
   @media (max-width: 600px) {
     .tag {
-      font-size: 10px !important;
-      padding: 4px !important;
+      font-size: 12px !important;
+      line-height: normal;
+      padding: 8px !important;
     }
-    #agenda{
-      max-width: 360px;
+    #agenda .d-flex{
+      zoom: 80%;
     }
   }
   #agenda{
     background-color: #112942;
-    font-family: none;
-    max-width: 600px;
-  }
-  #agenda .detail{
-    font-weight: 300;
-    font-family: system-ui;
-    font-size: 14px;
-  }
-  #agenda .swiper-button-lock{
-    display: block !important
   }
   #agenda img{
-    max-width: 200px;
+    max-width: 50px;
     object-fit: cover;
-    aspect-ratio: 16/12;
+    aspect-ratio: 1/1;
   }
 </style>
 
@@ -70,43 +73,52 @@
                 <h2 class="h1">{{ $c->name }}</h2>
                 <p class="col-12 col-md-10 ">{{ $c->description }}</p>
                 <div class="d-flex mb-4">
-                  <button type="button" class="btn btn-primary" data-mdb-modal-init data-mdb-target="#info{{ $c->id }}">Infografis</button>
-                  <a href="#agenda" class="btn btn-primary ms-2" data-mdb-collapse-init role="button">Agenda Budaya</a>
+                  <div class="mx-auto mx-md-0">
+                    <button type="button" class="btn btn-primary" data-mdb-modal-init data-mdb-target="#info{{ $c->id }}">Infografis</button>
+                    <a href="#agenda" class="btn btn-primary ms-2" data-mdb-collapse-init role="button">Agenda Budaya</a>
+                  </div>
                 </div>
                 <div class="collapse mx-auto rounded-6 text-white" id="agenda">
-                  <div class="p-3">
-                    <h4 class="text-center">Agenda Budaya</h4>
-                    <div class="d-flex justify-content-center">
-                      <div class="my-auto">  
-                        <div class="swiper2-prev"><i class="bi bi-arrow-left-circle fs-3"></i></div>
-                      </div>
-                      <div class="col-10 mx-auto">
-                        <div class="swiper mySwiper2">
-                          <div class="swiper-wrapper">
-
-                            @foreach ($c->cultural as $cu)
-                            <div class="swiper-slide">
-                              <div class="row p-2">
-                                <div class="col-12 col-md-6 detail my-auto">
-                                  <p class="mb-0">{{ $cu->name }}</p>
-                                  <p class="mb-0">{{ $cu->date }}</p>
-                                  <p class="mb-0">{{ $cu->place }}</p>
-                                  <p class="mb-0">{{ $cu->price }}</p>
-                                  <p class="mb-0">Semua Umur</p>
-                                </div>
-                                <div class="col-12 col-md-6 d-flex">
-                                  <img src="/assets/img/cultural/{{ $cu->image }}" class="m-auto rounded-3" alt="">
-                                </div>
-                              </div>
+                  <div class="p-3 pb-0 mb-2">
+                    <h4 class="text-center my-2">Agenda Budaya</h4>
+                    <br>
+                    <div class="row">
+                      @foreach ($c->cultural as $cu)
+                      <div class="col-12 mb-4">
+                        <div class="card p-2 p-md-3">
+                          <div class="d-flex">
+                            <div class="me-3 my-auto">
+                              <img src="/assets/img/cultural/{{ $cu->image }}" class="my-auto rounded-circle" alt="">
                             </div>
-                            @endforeach
+                            <div class="text-start"> 
+                              <p class="mb-0 fw-bold">{{ $cu->title }}</p>
+                              <p class="mb-0" style="font-size: 12px">{{ $cu->date }}</p>
+                              <p class="mb-0" style="font-size: 12px"><i class="fa fa-bank"></i> {{ $cu->place }}</p>
+                            </div>
+                            <div class="ms-auto my-auto">
+                              <span class="badge rounded-pill badge-primary" style="float: inline-end">{{ $cu->price }}</span>
+                              <br>
+                              <span class="badge rounded-pill badge-info">Semua umur</span>
+                            </div>
 
                           </div>
                         </div>
                       </div>
-                      <div class="my-auto">
-                        <div class="swiper2-next"><i class="bi bi-arrow-right-circle fs-3"></i></div>
-                      </div>
+                      {{-- <div class="swiper-slide">
+                        <div class="row p-2">
+                          <div class="col-12 col-md-6 detail my-auto">
+                            <p class="mb-0">{{ $cu->name }}</p>
+                            <p class="mb-0">{{ $cu->date }}</p>
+                            <p class="mb-0">{{ $cu->place }}</p>
+                            <p class="mb-0">{{ $cu->price }}</p>
+                            <p class="mb-0">Semua Umur</p>
+                          </div>
+                          <div class="col-12 col-md-6 d-flex">
+                            <img src="/assets/img/cultural/{{ $cu->image }}" class="m-auto rounded-3" alt="">
+                          </div>
+                        </div>
+                      </div>      --}}
+                      @endforeach
                     </div>
                   </div>
                   
@@ -120,6 +132,10 @@
                 <div class="col-6 mb-4">
                   <div class="img-thumb" data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#encyclopedia{{ $e->id }}">
                     <div class="tag rounded-4">{{ $e->title }}</div>
+                    {{-- <div class="custom-bg rounded-4" style="width:100%; background-image: url(/assets/img/encyclopedia/{{ $e->image }}); background-size: contain; background-position: right;"></div> --}}
+                    <div class="custom-bg bg-1 rounded-4" style="width: 55%; background-color: #3B71CA;"></div>
+                    <div class="custom-bg bg-2" style="width: 35%; left: 40%; transform: skewX(-35deg); background-color: #3B71CA"></div>
+                    
                     <img class="rounded-4" src="/assets/img/encyclopedia/{{ $e->image }}" alt="" style="aspect-ratio: 16/4">
                   </div>
                 </div>
