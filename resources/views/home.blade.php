@@ -10,6 +10,7 @@
   
   @include('sections.city')
   @include('sections.virtual')
+  @include('sections.testimonial')
   {{-- @include('sections.sample') --}}
 @endsection
 

@@ -106,8 +106,7 @@
                       </div>
                       @endforeach
                     </div>
-                  </div>
-                  
+                  </div>          
 
                 </div>
               </div>
@@ -129,12 +128,6 @@
                 @endforeach
               </div>
             </div>
-            
-            {{-- <div class="col-12 text-center mt-5">
-              <a href="#collapseExample" class=" mx-auto btn btn-primary mb-3" data-mdb-collapse-init data-mdb-ripple-init role="button" aria-expanded="false" aria-controls="collapseExample">
-                LIHAT TEMPAT WISATA
-              </a>     
-            </div> --}}
       
           </div>
         </div>

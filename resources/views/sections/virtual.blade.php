@@ -76,7 +76,11 @@
 
 <section class="py-5" style="background-color: #021526">
   <div class="container">
-    <h3 class="text-center text-white">Tur Virtual Wisata Indonesia</h3>
+    <h2 class="text-center text-white">Tur Virtual Wisata Indonesia</h2>
+    <br>
+    <p class="fs-4 text-center text-white">
+      <i>Mari kita jelajahi keindahannya bersama...</i>
+    </p>
     
     <div class="swiper mySwiper2">
       <div class="swiper-wrapper">
@@ -110,6 +114,10 @@
       <!-- Add Pagination -->
       <div class="swiper-pagination"></div>
     </div>
+
+    <p class="fs-4 text-center text-white mt-4 mb-0">
+      <i>...dan biarkan Indonesia meninggalkan kesan mendalam di perjalananmu.</i>
+    </p>
     
   </div>
 </section>
