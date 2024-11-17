@@ -4,12 +4,13 @@
   @include('sections.hero')
   @include('sections.map')
 
-  <section style="background-color: #98DED9;">
+  <section style="background-color: #FFF;">
     <div style="background-color: #FFF; height: 100px; border-radius: 0px 0px 40px 40px;"></div>
   </section>
   
   @include('sections.city')
-  @include('sections.sample')
+  @include('sections.virtual')
+  {{-- @include('sections.sample') --}}
 @endsection
 
 @section('script')

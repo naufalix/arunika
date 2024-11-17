@@ -144,34 +144,15 @@
               </div>
             </div>
             
-            <div class="col-12 text-center mt-5">
+            {{-- <div class="col-12 text-center mt-5">
               <a href="#collapseExample" class=" mx-auto btn btn-primary mb-3" data-mdb-collapse-init data-mdb-ripple-init role="button" aria-expanded="false" aria-controls="collapseExample">
                 LIHAT TEMPAT WISATA
-              </a>
-              
-            </div>
+              </a>     
+            </div> --}}
       
           </div>
         </div>
-        <div class="collapse mx-auto" id="collapseExample">
-          <div class="py-5" style="background-color: #021526">
-            <div class="container">
-              <h3 class="text-center text-hite">Tur Virtual Wisata Yogyakarta</h3>
-              <div class="swiper mySwiper3">
-                <div class="swiper-wrapper">
-                  @foreach ($c->tourism as $t)
-                  <div class="swiper-slide">
-                    <img src="/assets/img/tourism/{{ $t->image }}" alt="">
-                  </div>
-                  @endforeach
-                </div>
-                <div class="swiper-pagination"></div>
-              </div>
-              
-            </div>
-          </div>
-        </div>
-        
+
       </div>
       @endforeach
 
