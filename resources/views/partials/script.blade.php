@@ -2,6 +2,7 @@
 <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="/assets/vendor/mdb/js/mdb.umd.min.js"></script>
 <script src="/assets/vendor/leaflet/leaflet.js"></script>
+<script src="/assets/vendor/select2/select2.min.js"></script>
 <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
 <script src="/assets/vendor/pannellum/pannellum.js"></script>
 
@@ -13,16 +14,26 @@
   // Initialize leaflet
   var map = L.map('map', {
     center: [-2.2, 118],
-    zoom: 4.0
+    zoom: 5
   });
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
-
+  
   // Marker
   @foreach ($cities as $c)
   var {{ $c->name }} = L.marker([{{ $c->latitude }}, {{ $c->longitude }}]).addTo(map).bindPopup("<b>{{ $c->name }}</b><br><br><button class='btn btn-sm btn-primary'>Pergi</button>");
   @endforeach
+
+  // Initialize Select2
+  $('#searchcity').select2();
+  $('#searchcity').on('change', function() {
+    let coordinate = $(this).val(); 
+    let [lat, lng] = coordinate.split(',');
+    map.panTo(new L.LatLng(lat, lng));
+    map.setZoom(12);
+    map.panTo(new L.LatLng(lat, lng));
+  });
 
   // Initialize Swiper
   var swiper = new Swiper(".mySwiper", {
@@ -31,6 +42,7 @@
       prevEl: ".swiper-button-prev",
     },
   });
+
   var swiper2 = new Swiper(".mySwiper2", {
     effect: "coverflow",
     grabCursor: true,
@@ -56,6 +68,7 @@
       clickable: true
     }
   });
+
   var swiper3 = new Swiper(".mySwiper3", {
     slidesPerView: 1,
     spaceBetween: 30,

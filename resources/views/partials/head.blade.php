@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="/assets/vendor/mdb/css/mdb.min.css" />
   <link rel="stylesheet" href="/assets/vendor/leaflet/leaflet.css" />
   <link rel="stylesheet" href="/assets/vendor/pannellum/pannellum.css" />
+  <link rel="stylesheet" href="/assets/vendor/select2/select2.min.css" />
   <link rel="stylesheet" href="/assets/vendor/swiper/swiper-bundle.min.css" />
 
 
