@@ -13,13 +13,11 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <!-- Dropdown -->
-          <li><a class="nav-link" href="#beranda">Beranda</a></li>
-          <li><a class="nav-link" href="#tentang">Tentang</a></li>
-          <li><a class="nav-link" href="#lokasi">Lokasi</a></li>
-          <li><a class="nav-link" href="#ensiklopedia-budaya">Ensiklopedia Budaya</a></li>
-          <li><a class="nav-link" href="#tur-virtual">Tur Virtual</a></li>
-          <li><a class="nav-link" href="#agenda-budaya">Agenda Budaya</a></li>
-          <li><a class="nav-link" href="#ulasan">Ulasan</a></li>
+          <li><a class="nav-link" href="#hero">Beranda</a></li>
+          <li><a class="nav-link" href="#maps">Peta interaktif</a></li>
+          <li><a class="nav-link" href="#city">Ensiklopedia Budaya</a></li>
+          <li><a class="nav-link" href="#virtual">Tur Virtual</a></li>
+          <li><a class="nav-link" href="#testimonial">Ulasan</a></li>
           <li class="nav-item dropdown ms-auto d-none">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
