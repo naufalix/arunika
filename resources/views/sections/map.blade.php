@@ -6,6 +6,23 @@
     background-repeat: no-repeat;
     background-size: contain;
   }
+  #maps .select2{
+    min-height: auto;
+    transition: all .1s linear;
+    box-shadow: none;
+  }
+  #maps .select2-selection__rendered{
+    margin-top: auto;
+    margin-block: auto;
+  }
+  #maps .select2-selection__arrow{
+    display: none;
+  }
+  #maps .select2 .select2-selection{
+    border-radius: 12px;
+    height: 48px;
+    display: flex;
+  }
 </style>
 
 <section id="maps" class="pb-5">
@@ -20,11 +37,16 @@
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-12 col-md-7 mx-auto">
+      <div class="col-12 col-md-10 mx-auto">
         <div class="p-4 p-md-5 rounded-9" style="background-color: #295F98;">
-          <input type="text" class="form-control rounded-6" placeholder="Cari Daerah atau Kota disini..." style="height: 48px">
+          <select name="" id="searchcity" class="form-control form-select rounded-6">
+            <option selected disabled value="">Cari Daerah atau Kota disini...</option>
+            @foreach ($cities as $c)
+              <option value="{{$c->latitude}},{{$c->longitude}}">{{ $c->name }}</option>
+            @endforeach
+          </select>
           <br>
-          <div id="map" class="rounded-6" style="width: 100%; height: 400px;"></div>
+          <div id="map" class="rounded-6 mt-3" style="width: 100%; height: 400px;"></div>
         </div>
       </div>
       <div class="col-12 col-md-7 d-flex justify-content-center align-items-center" style="margin: -50px auto -230px auto;">
