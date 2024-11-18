@@ -56,6 +56,25 @@
       clickable: true
     }
   });
+  var swiper3 = new Swiper(".mySwiper3", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    speed: 1000,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+    },
+    navigation: {
+      nextEl: ".testimonial-next",
+      prevEl: ".testimonial-prev",
+    },
+  });
 
   function setvr(virtual,maps){
     pannellum.viewer('panorama', {
