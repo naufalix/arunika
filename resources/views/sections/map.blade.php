@@ -9,6 +9,15 @@
 </style>
 
 <section id="maps" class="pb-5">
+  <div class="container aos-init aos-animate" data-aos="fade-up">
+    <div class="section-title text-white aos-init aos-animate" data-aos="zoom-out">
+      <h5>Jelajahi</h5>
+      <h2>Peta Interaktif</h2>
+      <p class="col-md-4 mx-auto">
+        <i>Lorem Ipsum...</i>
+      </p>
+    </div>
+  </div>
   <div class="container">
     <div class="row">
       <div class="col-12 col-md-7 mx-auto">

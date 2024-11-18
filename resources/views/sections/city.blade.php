@@ -60,6 +60,16 @@
 </style>
 
 <section id="city" class="py-5">
+
+  <div class="container aos-init aos-animate" data-aos="fade-up">
+    <div class="section-title aos-init aos-animate" data-aos="zoom-out">
+      <h5>Ensiklopedia</h5>
+      <h2>Lorem Ipsum</h2>
+      <p class="col-md-4 mx-auto">
+        <i>Lorem Ipsum...</i>
+      </p>
+    </div>
+  </div>
   
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
@@ -118,8 +128,8 @@
                   <div class="img-thumb" data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#encyclopedia{{ $e->id }}">
                     <div class="tag rounded-4">{{ $e->title }}</div>
                     {{-- <div class="custom-bg rounded-4" style="width:100%; background-image: url(/assets/img/encyclopedia/{{ $e->image }}); background-size: contain; background-position: right;"></div> --}}
-                    <div class="custom-bg bg-1 rounded-4" style="width: 55%; background-color: #3B71CA;"></div>
-                    <div class="custom-bg bg-2" style="width: 35%; left: 40%; transform: skewX(-35deg); background-color: #3B71CA"></div>
+                    <div class="custom-bg bg-1 rounded-4" style="width: 55%; background-color: #295F98;"></div>
+                    <div class="custom-bg bg-2" style="width: 35%; left: 40%; transform: skewX(-35deg); background-color: #295F98"></div>
                     
                     <img class="rounded-4" src="/assets/img/encyclopedia/{{ $e->image }}" alt="" style="aspect-ratio: 16/4">
                   </div>

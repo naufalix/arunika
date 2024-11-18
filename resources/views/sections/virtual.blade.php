@@ -1,7 +1,6 @@
 <style>
   .swiper.mySwiper2 {
     width: 100%;
-    padding-top: 50px;
     padding-bottom: 50px;
   }
 
@@ -74,13 +73,19 @@
   }
 </style>
 
-<section class="py-5" style="background-color: #021526">
+<section id="virtual" style="background-color: #021526">
+  
+  <div class="container aos-init aos-animate" data-aos="fade-up">
+    <div class="section-title text-white aos-init aos-animate" data-aos="zoom-out">
+      <h5>JELAJAHI</h5>
+      <h2>Tur Virtual Wisata Indonesia</h2>
+      <p class="col-md-4 mx-auto">
+        <i>Mari kita jelajahi keindahannya bersama...</i>
+      </p>
+    </div>
+  </div>
+
   <div class="container">
-    <h2 class="text-center text-white">Tur Virtual Wisata Indonesia</h2>
-    <br>
-    <p class="fs-4 text-center text-white">
-      <i>Mari kita jelajahi keindahannya bersama...</i>
-    </p>
     
     <div class="swiper mySwiper2">
       <div class="swiper-wrapper">
@@ -115,7 +120,7 @@
       <div class="swiper-pagination"></div>
     </div>
 
-    <p class="fs-4 text-center text-white mt-4 mb-0">
+    <p class="fs-5 text-center pt-4 text-white mt-4 mb-0">
       <i>...dan biarkan Indonesia meninggalkan kesan mendalam di perjalananmu.</i>
     </p>
     

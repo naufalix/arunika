@@ -34,5 +34,34 @@
   <script src="/assets/js/jquery.min.js"></script>
 
   <style>
-    
+    section{ 
+      padding: 60px 0;
+    }
+    .section-title {
+      text-align: center;
+      padding-bottom: 40px;
+      position: relative;
+    }
+    .section-title h2{
+      font-size: 40px;
+      font-weight: 700;
+      position: relative;
+    }
+    .section-title h5{
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+    .section-title p{
+      font-size: 16px;
+    }
+    .btn-primary{
+      background-color: #295F98 !important
+    }
+    @media (max-width: 600px) {
+      .section-title h2{
+        font-size: 36px;
+      }
+    }
   </style>
