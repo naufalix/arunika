@@ -1,38 +1,3 @@
-<style>
-  #testimonial img{
-    aspect-ratio: 1/1;
-    object-fit: cover;
-  }
-  #testimonial .btn-floating{
-    width: 32px;
-    height: 32px;
-    z-index: 2;
-  }
-  #testimonial .testimonial-prev{
-    margin-right: -8px;
-  }
-  #testimonial .testimonial-next{
-    margin-left: -8px;
-  }
-  #testimonial #review .modal-content{
-    border-radius: 10px;
-  }
-  #testimonial #review .modal-body{
-    padding: 40px;
-  }
-  #testimonial #review .btn-close{
-    position: absolute;
-    right: 0;
-    z-index: 2;
-    font-size: 12px;
-  }
-  #testimonial #review h5{
-    font-size: 22px;
-  }
-  #testimonial #review p, #testimonial #review label{
-    font-size: 14px;
-  }
-</style>
 <section id="testimonial" style="background-color: #385F5C">
   
   <div class="container aos-init aos-animate" data-aos="fade-up">

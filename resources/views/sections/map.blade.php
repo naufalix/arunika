@@ -1,29 +1,3 @@
-<style>
-  #maps {
-    background-color: #8EACCD;
-    background-image: url('/assets/img/bg-awan.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-  #maps .select2{
-    min-height: auto;
-    transition: all .1s linear;
-    box-shadow: none;
-  }
-  #maps .select2-selection__rendered{
-    margin-top: auto;
-    margin-block: auto;
-  }
-  #maps .select2-selection__arrow{
-    display: none;
-  }
-  #maps .select2 .select2-selection{
-    border-radius: 12px;
-    height: 48px;
-    display: flex;
-  }
-</style>
-
 <section id="maps" class="pb-5">
   <div class="container aos-init aos-animate" data-aos="fade-up">
     <div class="section-title text-white aos-init aos-animate" data-aos="zoom-out">

@@ -1,4 +1,3 @@
-{{-- <section id="hero" style="background: linear-gradient(to bottom, #021526, #8EACCD);"> --}}
 <section id="hero" style="background: linear-gradient(to bottom left, #FFFFFF, #E2EAF7 );">
   <div class="container p-4">
     <div class="row py-5">

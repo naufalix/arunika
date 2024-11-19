@@ -1,0 +1,118 @@
+
+
+.btn-primary{
+  background-color: #295F98 !important
+}
+
+/* Section */
+section{ 
+  padding: 60px 0;
+}
+.section-title {
+  text-align: center;
+  padding-bottom: 40px;
+  position: relative;
+}
+.section-title h2{
+  font-size: 40px;
+  font-weight: 700;
+  position: relative;
+}
+.section-title h5{
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+.section-title p{
+  font-size: 16px;
+}
+
+@media (max-width: 600px) {
+  .section-title h2{
+    font-size: 36px;
+  }
+}
+
+
+/* Navbar */
+.bg-nav {
+  background: transparent;
+  transition: 0.2s ease-in;
+}
+.bg-nav.scrolled {
+  background: #FFFFFF;
+  box-shadow: var(--mdb-navbar-box-shadow);
+}
+.nav-link{
+  font-size: 15px;
+  margin: 0px 4px;
+}
+.navbar-toggler {
+  display: none;
+}
+@media (max-width: 992px) {
+  .bg-nav.scrolled .navbar-toggler {
+    display: block;
+  }
+}
+
+/* Map */
+#maps {
+  background-color: #8EACCD;
+  background-image: url('/assets/img/bg-awan.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#maps .select2{
+  min-height: auto;
+  transition: all .1s linear;
+  box-shadow: none;
+}
+#maps .select2-selection__rendered{
+  margin-top: auto;
+  margin-block: auto;
+}
+#maps .select2-selection__arrow{
+  display: none;
+}
+#maps .select2 .select2-selection{
+  border-radius: 12px;
+  height: 48px;
+  display: flex;
+}
+
+/* Testimonial */
+#testimonial img{
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+#testimonial .btn-floating{
+  width: 32px;
+  height: 32px;
+  z-index: 2;
+}
+#testimonial .testimonial-prev{
+  margin-right: -8px;
+}
+#testimonial .testimonial-next{
+  margin-left: -8px;
+}
+#testimonial #review .modal-content{
+  border-radius: 10px;
+}
+#testimonial #review .modal-body{
+  padding: 40px;
+}
+#testimonial #review .btn-close{
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  font-size: 12px;
+}
+#testimonial #review h5{
+  font-size: 22px;
+}
+#testimonial #review p, #testimonial #review label{
+  font-size: 14px;
+}

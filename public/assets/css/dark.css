@@ -1,0 +1,24 @@
+
+/* Navbar */
+.dark .bg-nav.scrolled {
+  background: #112942 !important;
+  box-shadow: var(--mdb-navbar-box-shadow);
+}
+.dark .navbar img{
+  filter: invert(0.9);
+}
+
+/* Hero */
+.dark #hero {
+  background: linear-gradient(to bottom left, #273748, #021526) !important;
+}
+.dark #hero h1{
+  color: #FFFFFF;
+}
+.dark #hero p{
+  color: #FFFFFF;
+}
+.dark #hero a{
+  color: #FFFFFF;
+}
+/* Testimonial */
