@@ -62,14 +62,16 @@
 
     function checkThemeSession() {
       var savedTheme = localStorage.getItem('theme');
-      $('.theme').css('display', 'none');
-      $('#' + savedTheme).css('display', 'block');
       if (savedTheme === 'nyx') {
         $('body').addClass('dark');
         $('.navbar').addClass('navbar-dark');
+        $('.theme').css('display', 'none');
+        $('#' + savedTheme).css('display', 'block');
       } else {
         $('body').removeClass('dark');
         $('.navbar').removeClass('navbar-dark');
+        $('.theme').css('display', 'none');
+        $('#' + savedTheme).css('display', 'block');
       }
     }
 
