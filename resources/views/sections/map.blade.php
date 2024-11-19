@@ -1,7 +1,6 @@
 <style>
   #maps {
     background-color: #8EACCD;
-    border-radius: 0px 0px 40px 40px;
     background-image: url('/assets/img/bg-awan.png');
     background-repeat: no-repeat;
     background-size: contain;
@@ -49,9 +48,7 @@
           <div id="map" class="rounded-6 mt-3" style="width: 100%; height: 400px;"></div>
         </div>
       </div>
-      <div class="col-12 col-md-7 d-flex justify-content-center align-items-center" style="margin: -50px auto -230px auto;">
-        <img src="/assets/img/buku.png" alt="" style="width: 100%">
-      </div>
+
     </div>
   </div>
 </section>

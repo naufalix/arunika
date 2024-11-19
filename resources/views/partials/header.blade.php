@@ -1,5 +1,5 @@
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-nav fixed-top">
+  <nav class="navbar navbar-expand-lg bg-nav fixed-top">
     <div class="container">
       {{-- <a class="navbar-brand" href="#">Arunika Nusantara</a> --}}
       <a class="navbar-brand" href="#">
@@ -8,7 +8,7 @@
     
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="text-white fa fa-bars"></i>
+        <i class="fa fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
@@ -18,12 +18,12 @@
           <li><a class="nav-link" href="#city">Ensiklopedia Budaya</a></li>
           <li><a class="nav-link" href="#virtual">Tur Virtual</a></li>
           <li><a class="nav-link" href="#testimonial">Ulasan</a></li>
-          <li><a class="nav-link" href="#"><i class="text-white fa fa-search"></i></a></li>
+          <li><a class="nav-link" href="#"><i class="fa fa-search"></i></a></li>
           <li id="day" class="mode">
-            <a class="nav-link" href="#" onclick="changemode('nyx')"><i class="text-white bi bi-sun"></i></a>
+            <a class="nav-link" href="#" onclick="changemode('nyx')"><i class="bi bi-sun"></i></a>
           </li>
           <li id="nyx" class="mode" style="display: none">
-            <a class="nav-link" href="#" onclick="changemode('day')"><i class="text-white bi bi-moon"></i></a>
+            <a class="nav-link" href="#" onclick="changemode('day')"><i class="bi bi-moon"></i></a>
           </li>
           <li class="nav-item dropdown ms-auto d-none">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -48,12 +48,13 @@
       transition: 0.2s ease-in;
     }
     .bg-nav.scrolled {
-      background: #021526 !important;
+      background: #FFFFFF !important;
+      /* background: #021526 !important; */
       box-shadow: var(--mdb-navbar-box-shadow);
     }
     .nav-link{
       font-size: 15px;
-      color: white;
+      /* color: white; */
       margin: 0px 4px;
     }
     .navbar-toggler {
