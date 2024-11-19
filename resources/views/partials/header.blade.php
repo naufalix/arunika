@@ -65,13 +65,13 @@
       if (savedTheme === 'nyx') {
         $('body').addClass('dark');
         $('.navbar').addClass('navbar-dark');
-        $('.theme').css('display', 'none');
-        $('#' + savedTheme).css('display', 'block');
+        $('#day').css('display', 'none');
+        $('#nyx').css('display', 'block');
       } else {
         $('body').removeClass('dark');
         $('.navbar').removeClass('navbar-dark');
-        $('.theme').css('display', 'none');
-        $('#' + savedTheme).css('display', 'block');
+        $('#nyx').css('display', 'none');
+        $('#day').css('display', 'block');
       }
     }
 
