@@ -29,3 +29,5 @@
 
   <!-- jQuery -->
   <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/jquery.easing.js"></script>
+  <script src="/assets/js/counter.min.js"></script>

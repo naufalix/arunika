@@ -2,6 +2,7 @@
 
 @section('content')
   @include('sections.hero')
+  @include('sections.statistic')
   @include('sections.map')
   @include('sections.city')
   @include('sections.virtual')
