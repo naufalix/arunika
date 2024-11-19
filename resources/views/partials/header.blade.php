@@ -18,6 +18,13 @@
           <li><a class="nav-link" href="#city">Ensiklopedia Budaya</a></li>
           <li><a class="nav-link" href="#virtual">Tur Virtual</a></li>
           <li><a class="nav-link" href="#testimonial">Ulasan</a></li>
+          <li><a class="nav-link" href="#"><i class="text-white fa fa-search"></i></a></li>
+          <li id="day" class="mode">
+            <a class="nav-link" href="#" onclick="changemode('nyx')"><i class="text-white bi bi-sun"></i></a>
+          </li>
+          <li id="nyx" class="mode" style="display: none">
+            <a class="nav-link" href="#" onclick="changemode('day')"><i class="text-white bi bi-moon"></i></a>
+          </li>
           <li class="nav-item dropdown ms-auto d-none">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
@@ -62,5 +69,10 @@
   <script>
     $(window).scroll(function(){
       $('nav').toggleClass('scrolled', $(this).scrollTop() > 100);
-      });
+    });
+
+    function changemode(mode) {
+      $('.mode').css('display', 'none');
+      $('#' + mode).css('display', 'block');
+    }
   </script>
