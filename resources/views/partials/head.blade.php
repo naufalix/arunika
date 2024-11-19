@@ -31,3 +31,7 @@
   <script src="/assets/js/jquery.min.js"></script>
   <script src="/assets/js/jquery.easing.js"></script>
   <script src="/assets/js/counter.min.js"></script>
+
+  <style>
+    {!! file_get_contents(public_path('assets/css/style.css')) !!}
+  </style>
