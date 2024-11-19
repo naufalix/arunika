@@ -3,7 +3,7 @@
     aspect-ratio: 1/1;
     object-fit: cover;
   }
-  #testimonial button{
+  #testimonial .btn-floating{
     width: 32px;
     height: 32px;
     z-index: 2;
@@ -13,6 +13,24 @@
   }
   #testimonial .testimonial-next{
     margin-left: -8px;
+  }
+  #testimonial #review2 .modal-content{
+    border-radius: 10px;
+  }
+  #testimonial #review2 .modal-body{
+    padding: 40px;
+  }
+  #testimonial #review2 .btn-close{
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    font-size: 12px;
+  }
+  #testimonial #review2 h5{
+    font-size: 22px;
+  }
+  #testimonial #review2 p, #testimonial #review2 label{
+    font-size: 14px;
   }
 </style>
 <section id="testimonial" style="background-color: #385F5C">
@@ -26,7 +44,7 @@
   </div>
 
   <div class="container px-md-5">
-    <div class="d-flex">
+    <div class="d-flex py-3">
       
       <div class="my-auto">
         <button type="button" class="btn btn-light btn-floating shadow-0 testimonial-prev">
@@ -38,7 +56,7 @@
         <div class="swiper-wrapper">
           @foreach ($testimonials as $t)
           <div class="swiper-slide d-flex align-items-stretch">
-            <div class="card p-3">
+            <div class="card p-3 rounded-6">
           
               <div class="d-flex mb-2">
                 <div class="me-3 my-auto">
@@ -65,6 +83,34 @@
         </button>
       </div>
 
+    </div>
+    <div class="d-flex pt-3">
+      <button type="button" class="btn btn-light mx-auto shadow-0 rounded-4" data-mdb-modal-init data-mdb-target="#review">Kirim ulasan</button>
+    </div>
+  </div>
+
+  <div class="modal fade" id="review" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        
+        <button type="button" class="btn-close p-3" data-mdb-ripple-init data-mdb-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12">
+              <h5 class="m-0 mt-4 text-primary">Kirimkan ulasan anda</h5>
+              <p>Bagikan pengalaman anda menggunakan website ini!</p>
+              <label class="my-2 text-black">Nama anda</label>
+              <input type="text" class="form-control mb-2 rounded-5" placeholder="Naufal Ulinnuha">
+              <label class="my-2 text-black">Ulasan anda</label>
+              <textarea class="form-control rounded-5" rows="3" placeholder="Maksimal 400 karakter"></textarea>
+              <div class="d-grid gap-2 mt-4">
+                <button class="btn btn-primary rounded-5" type="button" data-mdb-ripple-init>Kirim ulasan</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 
