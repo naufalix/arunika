@@ -12,6 +12,13 @@
 
 <script>
   
+
+  $(document).ready(function () {
+    setupCounters();
+  });
+
+
+
   // Initialize leaflet
   var map = L.map('map', {
     center: [-2.2, 118],

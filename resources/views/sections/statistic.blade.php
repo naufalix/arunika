@@ -1,18 +1,10 @@
-<style>
-  #statistic img{
-    width: 50px;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-  }
-</style>
-
 <section id="statistic" style="background: linear-gradient(to bottom right, #E2EAF7, #FFFFFF )">
   <div class="container">
     <div class="row">
       @php
         $stats = [
-          ['count' => 1941, 'name' => 'Warisan budaya'],
-          ['count' => 1340, 'name' => 'Suku bangsa'],
+          ['count' => 1239, 'name' => 'Warisan budaya'],
+          ['count' => 1300, 'name' => 'Suku bangsa'],
           ['count' => 718, 'name' => 'Bahasa daerah'],
           ['count' => 5300, 'name' => 'Kuliner khas']
         ];
@@ -39,16 +31,35 @@
 </section>
 
 <script>
-  $('.counter').each(function () {
-    var countTo = parseInt($(this).text(), 10);
+  function setupCounters() {
+  // Buat observer untuk mendeteksi elemen yang masuk viewport
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Elemen terlihat, jalankan counter
+        const element = $(entry.target);
+        var countTo = parseInt(element.text(), 10);
 
-    $(this).counter({
-      duration: 4000,
-      countFrom: 0,
-      countTo: countTo,
-      runOnce: true,
-      placeholder: "?",
-      easing: "easeOutCubic"
+        element.counter({
+          duration: 4000,
+          countFrom: 0,
+          countTo: countTo,
+          runOnce: true,
+          placeholder: "?",
+          easing: "easeOutCubic"
+        });
+
+        // Hentikan observasi untuk elemen ini agar tidak dijalankan ulang
+        observer.unobserve(entry.target);
+      }
     });
   });
+
+  // Tambahkan semua elemen .counter ke dalam observer
+  $('.counter').each(function () {
+    observer.observe(this);
+  });
+}
+
+
 </script>
