@@ -14,22 +14,22 @@
   #testimonial .testimonial-next{
     margin-left: -8px;
   }
-  #testimonial #review2 .modal-content{
+  #testimonial #review .modal-content{
     border-radius: 10px;
   }
-  #testimonial #review2 .modal-body{
+  #testimonial #review .modal-body{
     padding: 40px;
   }
-  #testimonial #review2 .btn-close{
+  #testimonial #review .btn-close{
     position: absolute;
     right: 0;
     z-index: 2;
     font-size: 12px;
   }
-  #testimonial #review2 h5{
+  #testimonial #review h5{
     font-size: 22px;
   }
-  #testimonial #review2 p, #testimonial #review2 label{
+  #testimonial #review p, #testimonial #review label{
     font-size: 14px;
   }
 </style>
