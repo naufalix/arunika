@@ -1,7 +1,7 @@
 
 /* Navbar */
 .dark .bg-nav.scrolled {
-  background: #112942 !important;
+  background: #0D1B2A !important;
   box-shadow: var(--mdb-navbar-box-shadow);
 }
 .dark .navbar img{
@@ -21,4 +21,19 @@
 .dark #hero a{
   color: #FFFFFF;
 }
-/* Testimonial */
+
+/* Statistic */
+.dark #statistic{
+  background: linear-gradient(to bottom right, #021526, #273748) !important;
+}
+.dark #statistic .card{
+  border: 1px solid #2E4057;
+  background-color: #1B263A;
+  box-shadow: none !important;
+}
+.dark #statistic .h4{
+  color:#FFFFFF !important;
+}
+.dark #statistic p{
+  color:#778DA9;
+}

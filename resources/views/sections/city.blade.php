@@ -64,7 +64,7 @@
   <div class="container aos-init aos-animate" data-aos="fade-up">
     <div class="section-title aos-init aos-animate" data-aos="zoom-out">
       <h5>Ensiklopedia</h5>
-      <h2>Lorem Ipsum</h2>
+      <h2 class="h2-bg">Lorem Ipsum</h2>
       <p class="col-md-4 mx-auto">
         <i>Lorem Ipsum...</i>
       </p>
