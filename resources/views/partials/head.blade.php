@@ -23,15 +23,23 @@
   <link rel="stylesheet" href="/assets/vendor/select2/select2.min.css" />
   <link rel="stylesheet" href="/assets/vendor/swiper/swiper-bundle.min.css" />
 
-  <!-- Main CSS File -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/dark.css">
-
   <!-- jQuery -->
   <script src="/assets/js/jquery.min.js"></script>
   <script src="/assets/js/jquery.easing.js"></script>
   <script src="/assets/js/counter.min.js"></script>
 
+  @php
+    function minify_css($css) {
+      // Hapus komentar, spasi, tab, dan baris baru
+      $css = preg_replace('!/\*.*?\*/!s', '', $css); // Hapus komentar
+      $css = preg_replace('/\s+/', ' ', $css);       // Ganti spasi dan baris baru dengan satu spasi
+      $css = str_replace([' {', '{ '], '{', $css);   // Hapus spasi di sekitar tanda kurung kurawal
+      $css = str_replace([' }', '} '], '}', $css);   // Hapus spasi di sekitar tanda kurawal
+      $css = str_replace([' ;', '; '], ';', $css);   // Hapus spasi di sekitar titik koma
+      return trim($css);
+    }
+  @endphp
+
   <style>
-    {!! file_get_contents(public_path('assets/css/style.css')) !!}
+    {!! minify_css(file_get_contents(public_path('assets/css/style.css'))) !!}{!! minify_css(file_get_contents(public_path('assets/css/dark.css'))) !!}
   </style>
