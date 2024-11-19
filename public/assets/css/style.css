@@ -14,9 +14,20 @@ section{
   position: relative;
 }
 .section-title h2{
-  font-size: 40px;
+  font-size: 36px;
   font-weight: 700;
   position: relative;
+}
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 122px;
+  height: 66px;
+  background: url(/assets/img/section-title-bg.png) no-repeat;
+  z-index: -1;
 }
 .section-title h5{
   font-size: 16px;
@@ -27,6 +38,7 @@ section{
 .section-title p{
   font-size: 16px;
 }
+
 
 @media (max-width: 600px) {
   .section-title h2{
