@@ -3,6 +3,7 @@
 @section('content')
   @include('sections.hero')
   @include('sections.statistic')
+  @include('sections.quotes')
   @include('sections.map')
   @include('sections.city')
   @include('sections.virtual')
