@@ -15,7 +15,7 @@
           <div class="card">
             <div class="p-3 d-flex">
               <div class="my-auto">
-                <img class="rounded-circle" src="/assets/img/elaina.webp" alt="" style="width: 50px;">
+                <img class="rounded-circle" src="/assets/img/s{{$loop->iteration}}.webp" alt="" style="width: 50px;">
               </div>
               <div class="mx-3">
                 <p class="mb-0 h4 counter">{{ $s['count'] }}</p>
