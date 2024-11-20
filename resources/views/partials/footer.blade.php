@@ -31,7 +31,7 @@
   </section>
 
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2024 <b>Team Takoyaki Geprek</b>. <a class="text-primary fw-bold" href="#">Credit</a>
+    © 2024 <b>Team Takoyaki Geprek</b>. <a class="text-primary fw-bold" href="https://docs.google.com/spreadsheets/d/16Y_LT2u4bhOuAknDTU6YXTWIsjewWeSeaU7QkBgMIAQ/">Credit</a>
   </div>
 
 </footer>
