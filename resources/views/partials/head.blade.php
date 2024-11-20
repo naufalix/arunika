@@ -5,8 +5,7 @@
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  {{-- <link href="/assets/img/favicon.png" rel="icon">
-  <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon"> --}}
+  <link href="/assets/img/logo-new.png" rel="icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
