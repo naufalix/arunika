@@ -3,7 +3,7 @@
     <div class="container">
       {{-- <a class="navbar-brand" href="#">Arunika Nusantara</a> --}}
       <a class="navbar-brand" href="#">
-        <img src="/assets/img/logo1.png" alt="Arunika Nusantara Logo" style="height: 40px;">
+        <img src="/assets/img/logo-new.png" alt="Arunika Nusantara Logo" style="height: 40px;">
       </a>
     
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -13,11 +13,11 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <!-- Dropdown -->
-          <li><a class="nav-link" href="#hero">Beranda</a></li>
-          <li><a class="nav-link" href="#maps">Peta interaktif</a></li>
-          <li><a class="nav-link" href="#city">Ensiklopedia Budaya</a></li>
-          <li><a class="nav-link" href="#virtual">Tur Virtual</a></li>
-          <li><a class="nav-link" href="#testimonial">Ulasan</a></li>
+          <li><a class="nav-link" lang-id="nv1" href="#hero">Beranda</a></li>
+          <li><a class="nav-link" lang-id="nv2" href="#maps">Peta interaktif</a></li>
+          <li><a class="nav-link" lang-id="nv3" href="#city">Ensiklopedia Budaya</a></li>
+          <li><a class="nav-link" lang-id="nv4" href="#virtual">Tur Virtual</a></li>
+          <li><a class="nav-link" lang-id="nv5" href="#testimonial">Ulasan</a></li>
           <li>
             <button class="nav-link" data-mdb-collapse-init data-mdb-ripple-init data-mdb-target="#nv-s" aria-expanded="false" aria-controls="nv-s"><i class="fa fa-search"></i></button>
           </li>
@@ -33,12 +33,21 @@
               </div>
             </div>
           </li>
+          
           <li id="day" class="theme">
             <button class="nav-link" onclick="changetheme('nyx')"><i class="bi bi-sun"></i></button>
           </li>
           <li id="nyx" class="theme" style="display: none">
             <button class="nav-link" onclick="changetheme('day')"><i class="bi bi-moon"></i></button>
           </li>
+
+          <li id="lang_id" class="lang">
+            <button class="nav-link" onclick="language('en')"><img src="/assets/img/flag_id.svg" alt=""></button>
+          </li>
+          <li id="lang_en" class="lang" style="display: none">
+            <button class="nav-link" onclick="language('id')"><img src="/assets/img/flag_en.svg" alt=""></button>
+          </li>
+          
           <li class="nav-item dropdown ms-auto d-none">
             <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
@@ -57,44 +66,6 @@
   </nav>
 
   <script>
-    $(window).scroll(function(){
-      $('nav').toggleClass('scrolled', $(this).scrollTop() > 100);
-    });
-
-    function changetheme(theme) {
-      $('.theme').css('display', 'none');
-      $('#' + theme).css('display', 'block');
-      if (theme === 'nyx') {
-        $('body').addClass('dark');
-        $('.navbar').addClass('navbar-dark');
-        //L.tileLayer.provider('Stadia.AlidadeSmoothDark').addTo(map);
-      } else {
-        $('body').removeClass('dark');
-        $('.navbar').removeClass('navbar-dark');
-        //L.tileLayer.provider('CyclOSM').addTo(map);
-      }
-      localStorage.setItem('theme', theme);
-    }
-
-    function checkThemeSession() {
-      var savedTheme = localStorage.getItem('theme');
-      if (savedTheme === 'nyx') {
-        $('body').addClass('dark');
-        $('.navbar').addClass('navbar-dark');
-        $('#day').css('display', 'none');
-        $('#nyx').css('display', 'block');
-        //L.tileLayer.provider('Stadia.AlidadeSmoothDark').addTo(map);
-      } else {
-        $('body').removeClass('dark');
-        $('.navbar').removeClass('navbar-dark');
-        $('#nyx').css('display', 'none');
-        $('#day').css('display', 'block');
-      }
-    }
-
-    $(document).ready(function () {
-      // Periksa tema dari sesi dan terapkan
-      checkThemeSession();
-    });
+    
 
   </script>
