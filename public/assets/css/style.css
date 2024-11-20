@@ -76,7 +76,7 @@ section{
   display: none;
 }
 #navbarNav .select2 .select2-selection__rendered{
-  min-width: 200;
+  min-width: 200px;
   color: #999999;
 }
 #navbarNav .lang button img{
