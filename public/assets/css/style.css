@@ -235,6 +235,13 @@ section{
   object-fit: cover;
   aspect-ratio: 1/1;
 }
+#agenda .card{
+  transition: transform 0.5s ease-in-out;
+}
+#agenda .card:hover{
+  filter: drop-shadow(2px 4px 6px #11111190);
+  transform: scale(1.05);
+}
 
 /* Virtual */
 #virtual{
