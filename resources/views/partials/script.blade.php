@@ -49,6 +49,16 @@
     map.setZoom(12);
     map.panTo(new L.LatLng(lat, lng));
   });
+  $('#searchnavbar').select2();
+  $('#searchnavbar').on('change', function() {
+    let coordinate = $(this).val(); 
+    let [lat, lng] = coordinate.split(',');
+    map.panTo(new L.LatLng(lat, lng));
+    map.setZoom(12);
+    map.panTo(new L.LatLng(lat, lng));
+    var top = $("#maps").position().top;
+    $('html').scrollTop(top);
+  });
 
   // Initialize Swiper
   var swiper = new Swiper(".mySwiper", {
@@ -101,6 +111,20 @@
     navigation: {
       nextEl: ".testimonial-next",
       prevEl: ".testimonial-prev",
+    },
+  });
+
+  var swiper4 = new Swiper(".mySwiper4", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    speed: 1000,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".quotes-next",
+      prevEl: ".quotes-prev",
     },
   });
 

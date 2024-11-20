@@ -3,7 +3,7 @@
     <div class="container">
       {{-- <a class="navbar-brand" href="#">Arunika Nusantara</a> --}}
       <a class="navbar-brand" href="#">
-        <img src="/assets/img/logo.png" alt="Arunika Nusantara Logo" style="height: 40px;">
+        <img src="/assets/img/logo1.png" alt="Arunika Nusantara Logo" style="height: 40px;">
       </a>
     
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -18,7 +18,21 @@
           <li><a class="nav-link" href="#city">Ensiklopedia Budaya</a></li>
           <li><a class="nav-link" href="#virtual">Tur Virtual</a></li>
           <li><a class="nav-link" href="#testimonial">Ulasan</a></li>
-          <li><button class="nav-link" ><i class="fa fa-search"></i></button></li>
+          <li>
+            <button class="nav-link" data-mdb-collapse-init data-mdb-ripple-init data-mdb-target="#nv-s" aria-expanded="false" aria-controls="nv-s"><i class="fa fa-search"></i></button>
+          </li>
+          <li class="collapse" id="nv-s">
+            <div class="d-flex h-100">
+              <div class="my-auto">
+                <select name="" id="searchnavbar" class="form-control form-select rounded-6">
+                  <option selected disabled value="">Cari daerah atau kota</option>
+                  @foreach ($cities as $c)
+                    <option value="{{$c->latitude}},{{$c->longitude}}">{{ $c->name }}</option>
+                  @endforeach
+                </select>
+              </div>
+            </div>
+          </li>
           <li id="day" class="theme">
             <button class="nav-link" onclick="changetheme('nyx')"><i class="bi bi-sun"></i></button>
           </li>
