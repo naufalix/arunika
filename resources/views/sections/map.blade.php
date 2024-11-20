@@ -10,10 +10,10 @@
   <div class="cloud cloud3 pb-5">
     <div class="container aos-init aos-animate" data-aos="fade-up">
       <div class="section-title aos-init aos-animate" data-aos="zoom-out">
-        <h5 class="text-primary">Jelajahi</h5>
-        <h2 class="h-bg">Peta Interaktif</h2>
+        <h5 class="text-primary" lang-id="mp1">Jelajahi</h5>
+        <h2 class="h-bg" lang-id="mp2">Peta Interaktif</h2>
         <p class="col-md-4 mx-auto">
-          <i>Rasakan pengalaman menjelajah Budaya Nusantara dengan ujung jari Anda!</i>
+          <i lang-id="mp3">Rasakan pengalaman menjelajah Budaya Nusantara dengan ujung jari Anda!</i>
         </p>
       </div>
     </div>
@@ -23,7 +23,7 @@
           <div class="card rounded-7" style="background-color: #295F98;">
             <div class="card-body">
               <select name="" id="searchcity" class="form-control form-select rounded-6">
-                <option selected disabled value="">Cari Daerah atau Kota disini...</option>
+                <option selected disabled value="" lang-id="mp4">Cari Daerah atau Kota disini...</option>
                 @foreach ($cities as $c)
                   <option value="{{$c->latitude}},{{$c->longitude}}">{{ $c->name }}</option>
                 @endforeach

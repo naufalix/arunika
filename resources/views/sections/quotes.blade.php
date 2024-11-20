@@ -27,7 +27,7 @@
   <div class="bg-quotes p-md-5 py-5">
     <div class="container">
       <div class="text-center">
-        <h3 class="text-white mb-4">Budaya kuat, wujudkan Indonesia Emas 2045.</h3>
+        <h3 class="text-white mb-4" lang-id="qt1">Budaya kuat, wujudkan Indonesia Emas 2045.</h3>
         
         <div class="d-flex">
           <div class="my-auto">

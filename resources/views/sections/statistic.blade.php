@@ -19,7 +19,7 @@
               </div>
               <div class="mx-3">
                 <p class="mb-0 h4 counter">{{ $s['count'] }}</p>
-                <p class="mb-0">{{ $s['name'] }}</p>
+                <p class="mb-0" lang-id="st{{$loop->iteration}}">{{ $s['name'] }}</p>
               </div>
             </div>
           </div>
@@ -29,37 +29,3 @@
     </div>
   </div>
 </section>
-
-<script>
-  function setupCounters() {
-  // Buat observer untuk mendeteksi elemen yang masuk viewport
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Elemen terlihat, jalankan counter
-        const element = $(entry.target);
-        var countTo = parseInt(element.text(), 10);
-
-        element.counter({
-          duration: 4000,
-          countFrom: 0,
-          countTo: countTo,
-          runOnce: true,
-          placeholder: "?",
-          easing: "easeOutCubic"
-        });
-
-        // Hentikan observasi untuk elemen ini agar tidak dijalankan ulang
-        observer.unobserve(entry.target);
-      }
-    });
-  });
-
-  // Tambahkan semua elemen .counter ke dalam observer
-  $('.counter').each(function () {
-    observer.observe(this);
-  });
-}
-
-
-</script>

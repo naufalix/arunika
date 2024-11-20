@@ -2,10 +2,10 @@
   
   <div class="container aos-init aos-animate" data-aos="fade-up">
     <div class="section-title aos-init aos-animate" data-aos="zoom-out">
-      <h5 class="text-primary">JELAJAHI</h5>
-      <h2 class="h-bg">Tur Virtual Wisata Indonesia</h2>
+      <h5 class="text-primary" lang-id="vr1">JELAJAHI</h5>
+      <h2 class="h-bg" lang-id="vr2">Tur Virtual Wisata Indonesia</h2>
       <p class="col-md-4 mx-auto">
-        <i>Mari kita jelajahi keindahannya bersama...</i>
+        <i lang-id="vr3">Mari kita jelajahi keindahannya bersama...</i>
       </p>
     </div>
   </div>
@@ -47,7 +47,7 @@
 
     <div class="section-title aos-init aos-animate" data-aos="zoom-out">
       <p class="fs-5 text-center pt-4 mt-4 mb-0">
-        <i>...dan biarkan Indonesia meninggalkan kesan mendalam di perjalananmu.</i>
+        <i lang-id="vr4">...dan biarkan Indonesia meninggalkan kesan mendalam di perjalananmu.</i>
       </p>
     </div>
     

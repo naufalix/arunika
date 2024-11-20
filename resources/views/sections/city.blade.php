@@ -2,10 +2,10 @@
 
   <div class="container aos-init aos-animate" data-aos="fade-up">
     <div class="section-title aos-init aos-animate" data-aos="zoom-out">
-      <h5 class="text-primary">Pelajari</h5>
-      <h2 class="h-bg">Ensiklopedia Kekayaan Nusantara</h2>
+      <h5 class="text-primary" lang-id="en1">Pelajari</h5>
+      <h2 class="h-bg" lang-id="en2">Ensiklopedia Kekayaan Nusantara</h2>
       <p class="col-md-4 mx-auto">
-        <i>Temukan budaya-budaya dari seluruh penjuru Indonesia!</i>
+        <i lang-id="en3">Temukan budaya-budaya dari seluruh penjuru Indonesia!</i>
       </p>
     </div>
   </div>

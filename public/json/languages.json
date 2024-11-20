@@ -1,0 +1,202 @@
+[
+  {
+      "id" : "nv1",
+      "lang_id": "Beranda",
+      "lang_en": "Home"
+  },
+  {
+      "id" : "nv2",
+      "lang_id": "Peta Interaktif",
+      "lang_en": "Interactive Map"
+  },
+  {
+      "id" : "nv3",
+      "lang_id": "Ensiklopedia Budaya",
+      "lang_en": "Cultural Encyclopedia"
+  },
+  {
+      "id" : "nv4",
+      "lang_id": "Tur Virtual",
+      "lang_en": "Virtual Tour"
+  },
+  {
+      "id" : "nv5",
+      "lang_id": "Ulasan",
+      "lang_en": "Review"
+  },
+  {
+      "id" : "he1",
+      "lang_id": "Platform interaktif untuk menjelajahi keindahan alam, budaya, dan adat Nusantara melalui peta interaktif, ensiklopedia budaya, serta tur virtual. Temukan agenda budaya terkini dan ulasan autentik!",
+      "lang_en": "An interactive platform to explore the natural beauty, culture, and customs of the Nusantara through interactive maps, cultural encyclopedias, and virtual tours. Find the latest cultural agenda and authentic reviews!"
+  },
+  {
+      "id" : "he2",
+      "lang_id": "MULAI EKSPLORASI",
+      "lang_en": "START EXPLORING"
+  },
+  {
+      "id" : "st1",
+      "lang_id": "Warisan Budaya",
+      "lang_en": "Cultural Heritage"
+  },
+  {
+      "id" : "st2",
+      "lang_id": "Suku Bangsa",
+      "lang_en": "Nation Tribes"
+  },
+  {
+      "id" : "st3",
+      "lang_id": "Bahasa Daerah",
+      "lang_en": "Regional Language"
+  },
+  {
+      "id" : "st4",
+      "lang_id": "Kuliner Khas",
+      "lang_en": "Specialty Culinary"
+  },
+  {
+      "id" : "qt1",
+      "lang_id": "Budaya kuat, wujudkan Indonesia Emas 2045.",
+      "lang_en": "Strong culture, realizing Golden Indonesia 2045."
+  },
+  {
+      "id" : "mp1",
+      "lang_id": "JELAJAHI",
+      "lang_en": "EXPLORE"
+  },
+  {
+      "id" : "mp2",
+      "lang_id": "peta interaktif",
+      "lang_en": "Interactive Map"
+  },
+  {
+      "id" : "mp3",
+      "lang_id": "Rasakan pengalaman menjelajah Budaya Nusantara dengan ujung jari Anda!",
+      "lang_en": "Experience exploring Indonesian culture at your fingertips!"
+  },
+  {
+      "id" : "mp4",
+      "lang_id": "Cari Daerah atau Kota di sini...",
+      "lang_en": "Search Region or City here..."
+  },
+  {
+      "id" : "en1",
+      "lang_id": "Pelajari",
+      "lang_en": "Learn"
+  },
+  {
+      "id" : "en2",
+      "lang_id": "Ensiklopedia Kekayaan Nusantara",
+      "lang_en": "Encyclopedia of Archipelago Wealth"
+  },
+  {
+      "id" : "en3",
+      "lang_id": "Temukan budaya-budaya dari seluruh penjuru Indonesia!",
+      "lang_en": "Discover cultures from all corners of Indonesia!"
+  },
+  {
+      "id" : "vr1",
+      "lang_id": "JELAJAHI",
+      "lang_en": "EXPLORE"
+  },
+  {
+      "id" : "vr2",
+      "lang_id": "Tur Virtual Wisata Indonesia",
+      "lang_en": "Virtual Tour of Indonesia"
+  },
+  {
+      "id" : "vr3",
+      "lang_id": "Mari kita jelajahi keindahannya bersama...",
+      "lang_en": "Let's explore its beauty together..."
+  },
+  {
+      "id" : "vr4",
+      "lang_id": "...dan biarkan Indonesia meninggalkan kesan mendalam di perjalananmu.",
+      "lang_en": "...and let Indonesia leave a deep impression on your journey."
+  },
+  {
+      "id" : "ts1",
+      "lang_id": "Testimoni",
+      "lang_en": "Testimonials"
+  },
+  {
+      "id" : "ts2",
+      "lang_id": "Kata Mereka",
+      "lang_en": "Their Words"
+  },
+  {
+      "id" : "ts3",
+      "lang_id": "Temukan inspirasi dan rekomendasi dari sesama pengguna yang telah mencoba tur virtual dan ensiklopedia budaya",
+      "lang_en": "Find inspiration and recommendations from fellow users who have tried our virtual tour and cultural encyclopedia."
+  },
+  {
+      "id" : "ts4",
+      "lang_id": "KIRIM ULASAN",
+      "lang_en": "SEND REVIEWS"
+  },
+  {
+      "id": "ts5",
+      "lang_id": "Kirimkan ulasan anda",
+      "lang_en": "Submit your review"
+  },
+  {
+      "id": "ts6",
+      "lang_id": "Bagikan pengalaman anda menggunakan website ini!",
+      "lang_en": "Share your experience using this website!"
+  },
+  {
+      "id": "ts7",
+      "lang_id": "Nama anda",
+      "lang_en": "Your name"
+  },
+  {
+      "id": "ts8",
+      "lang_id": "Siapakah anda",
+      "lang_en": "Who are you"
+  },
+  {
+      "id": "ts9",
+      "lang_id": "Ulasan anda",
+      "lang_en": "Your review"
+  },
+  {
+      "id": "ts10",
+      "lang_id": "Kirim ulasan",
+      "lang_en": "Submit review"
+  },
+  {
+      "id" : "ft1",
+      "lang_id": "Platform interaktif untuk menjelajahi keindahan alam, budaya, dan adat Nusantara melalui peta interaktif, ensiklopedia budaya, serta tur virtual.",
+      "lang_en": "An interactive platform to explore the natural beauty, culture, and customs of the Nusantara through interactive maps, cultural encyclopedias, and virtual tours."
+  },
+  {
+      "id" : "ft2",
+      "lang_id": "FITUR",
+      "lang_en": "FEATURES"
+  },
+  {
+      "id" : "ft3",
+      "lang_id": "Beranda",
+      "lang_en": "Home"
+  },
+  {
+      "id" : "ft4",
+      "lang_id": "Peta Interaktif",
+      "lang_en": "Interactive Map"
+  },
+  {
+      "id" : "ft5",
+      "lang_id": "Ensiklopedia",
+      "lang_en": "Encyclopedia"
+  },
+  {
+      "id" : "ft6",
+      "lang_id": "Tur Virtual",
+      "lang_en": "Virtual Tour"
+  },
+  {
+      "id" : "ft7",
+      "lang_id": "KONTAK",
+      "lang_en": "CONTACT"
+  }
+]

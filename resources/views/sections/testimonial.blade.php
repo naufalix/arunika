@@ -2,9 +2,9 @@
   
   <div class="container aos-init aos-animate" data-aos="fade-up">
     <div class="section-title aos-init aos-animate" data-aos="zoom-out">
-      <h5 class="text-primary">Testimoni</h5>
-      <h2 class="h-bg">Kata Mereka</h2>
-      <p class="col-md-4 mx-auto">Temukan inspirasi dan rekomendasi dari sesama pengguna yang telah mencoba tur virtual dan ensiklopedia budaya</p>
+      <h5 class="text-primary" lang-id="ts1">Testimoni</h5>
+      <h2 class="h-bg" lang-id="ts2">Kata Mereka</h2>
+      <p class="col-md-4 mx-auto" lang-id="ts3">Temukan inspirasi dan rekomendasi dari sesama pengguna yang telah mencoba tur virtual dan ensiklopedia budaya</p>
     </div>
   </div>
 
@@ -51,7 +51,7 @@
 
     </div>
     <div class="d-flex pt-3">
-      <button type="button" class="btn btn-light mx-auto shadow-0 rounded-4" data-mdb-modal-init data-mdb-target="#review">Kirim ulasan</button>
+      <button type="button" class="btn btn-light mx-auto shadow-0 rounded-4" data-mdb-modal-init data-mdb-target="#review" lang-id="ts4">Kirim ulasan</button>
     </div>
   </div>
 
@@ -69,16 +69,16 @@
         <div class="modal-body pt-0">
           <div class="row">
             <div class="col-12">
-              <h5 class="m-0 mt-4 text-primary">Kirimkan ulasan anda</h5>
-              <p>Bagikan pengalaman anda menggunakan website ini!</p>
-              <label class="my-2">Nama anda</label>
+              <h5 class="m-0 mt-4 text-primary" lang-id="ts5">Kirimkan ulasan anda</h5>
+              <p lang-id="ts6">Bagikan pengalaman anda menggunakan website ini!</p>
+              <label class="my-2" lang-id="ts7">Nama anda</label>
               <input type="text" class="form-control mb-2 rounded-5" placeholder="Naufal Ulinnuha">
-              <label class="my-2">Siapakah anda</label>
+              <label class="my-2" lang-id="ts8">Siapakah anda</label>
               <input type="text" class="form-control mb-2 rounded-5" placeholder="Siswa SD">
-              <label class="my-2">Ulasan anda</label>
+              <label class="my-2" lang-id="ts9">Ulasan anda</label>
               <textarea class="form-control rounded-5" rows="3" placeholder="Maksimal 400 karakter"></textarea>
               <div class="d-grid gap-2 mt-4">
-                <button class="btn btn-primary rounded-5" type="button" data-mdb-ripple-init>Kirim ulasan</button>
+                <button class="btn btn-primary rounded-5" type="button" data-mdb-ripple-init lang-id="ts10">Kirim ulasan</button>
               </div>
             </div>
           </div>
