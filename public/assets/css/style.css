@@ -1,5 +1,3 @@
-
-
 .btn-primary{
   background-color: #295F98 !important
 }
@@ -78,7 +76,12 @@ section{
   display: none;
 }
 #navbarNav .select2 .select2-selection__rendered{
+  min-width: 200;
   color: #999999;
+}
+#navbarNav .lang button img{
+  height: 16px;
+  border-radius: 2px;
 }
 
 /* Hero */
@@ -373,3 +376,18 @@ section{
 #testimonial #review p, #testimonial #review label{
   font-size: 14px;
 }
+
+*{
+	cursor: url(/assets/img/cursor.png),auto !important;
+}
+/* Scrollbar */
+::-webkit-scrollbar
+{width: 8px;height: 8px;}
+::-webkit-scrollbar-track
+{border-radius: 0px;}
+::-webkit-scrollbar-thumb {
+  background: #295F9890; 
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover
+{background: #295F98; }
