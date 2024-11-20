@@ -19,6 +19,9 @@
 .dark .navbar img{
   filter: invert(0.9);
 }
+.dark #navbarNav .select2 .select2-selection{
+  background-color: transparent !important;
+}
 
 /* Hero */
 .dark #hero {
@@ -94,13 +97,29 @@
 .dark #testimonial {
   background: #021526 !important;
 }
-.dark #testimonial .card, .dark #testimonial .btn-light{
+.dark #testimonial .card,
+.dark #testimonial .btn-light,
+.dark #testimonial .modal .modal-content{
   border: 1px solid #2E4057;
   background-color: #1B263A !important;
 }
-.dark #testimonial .card h6{
+.dark #testimonial .card h6,
+.dark #testimonial .modal label,
+.dark #testimonial .modal .modal-header button{
  color: #FFFFFF; 
 }
-.dark #testimonial .card p, .dark #testimonial .btn-light{
+.dark #testimonial .card p,
+.dark #testimonial .btn-light,
+.dark #testimonial .modal p{
   color: #CCCCCC;
+}
+.dark #testimonial .modal input,
+.dark #testimonial .modal textarea{
+  background-color: transparent;
+  color: #CCCCCC;
+  border: 1px solid #2E4057;
+}
+.dark #testimonial .modal input::placeholder,
+.dark #testimonial .modal textarea::placeholder{
+  color: #AAAAAA;
 }

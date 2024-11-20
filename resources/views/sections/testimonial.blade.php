@@ -19,6 +19,7 @@
       
       <div class="swiper mySwiper3">
         <div class="swiper-wrapper">
+          
           @foreach ($testimonials as $t)
           <div class="swiper-slide d-flex align-items-stretch">
             <div class="card p-3 rounded-6">
@@ -58,8 +59,14 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         
-        <button type="button" class="btn-close p-3" data-mdb-ripple-init data-mdb-dismiss="modal" aria-label="Close"></button>
-        <div class="modal-body">
+        <div class="modal-header border-0 pb-0 d-flex">
+          <button class="ms-auto border-0" type="button" data-mdb-dismiss="modal" aria-label="Close">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+        
+        {{-- <button type="button" class="btn-close p-3" data-mdb-ripple-init data-mdb-dismiss="modal" aria-label="Close"></button> --}}
+        <div class="modal-body pt-0">
           <div class="row">
             <div class="col-12">
               <h5 class="m-0 mt-4 text-primary">Kirimkan ulasan anda</h5>

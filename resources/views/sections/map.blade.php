@@ -13,7 +13,7 @@
         <h5 class="text-primary">Jelajahi</h5>
         <h2 class="h-bg">Peta Interaktif</h2>
         <p class="col-md-4 mx-auto">
-          <i>Lorem Ipsum...</i>
+          <i>Rasakan pengalaman menjelajah Budaya Nusantara dengan ujung jari Anda!</i>
         </p>
       </div>
     </div>
