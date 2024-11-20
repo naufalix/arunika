@@ -1,3 +1,15 @@
+/* Section */
+.dark .section-title .h-bg::after {
+  width: 0px !important;
+  height: 0px !important;
+}
+.dark .section-title h2 {
+  color: #FFFFFF !important;
+}
+.dark .section-title p {
+  color: #EEEEEE !important;
+}
+
 
 /* Navbar */
 .dark .bg-nav.scrolled {
@@ -29,11 +41,66 @@
 .dark #statistic .card{
   border: 1px solid #2E4057;
   background-color: #1B263A;
-  box-shadow: none !important;
+  box-shadow: 0px 0px 0px transparent !important;
+  
 }
 .dark #statistic .h4{
   color:#FFFFFF !important;
 }
 .dark #statistic p{
   color:#778DA9;
+}
+
+/* Maps */
+.dark #maps {
+  background: linear-gradient(to bottom right, #273748, #021526) !important;
+}
+.dark #maps .card {
+  border: 1px solid #2E4057;
+  background-color: #1B263A !important;
+}
+
+/* Ensiklopedia */
+.dark #city{
+  background-color: #021526 !important;
+}
+.dark #city .city-info h2,
+.dark #city .modal h3, 
+.dark #city .modal .modal-header button,
+.dark #city #agenda .card p{
+ color: #FFFFFF; 
+}
+.dark #city .city-info p,
+.dark #city .modal p,
+.dark #city .modal span, 
+.dark #city .modal tr{
+  color: #EEEEEE;
+}
+.dark #city .modal .modal-content{
+  border: 1px solid #2E4057;
+  background-color: #1B263A !important;
+}
+.dark #city #agenda .card {
+  border: 1px solid #2E4057;
+  background-color: #1B263A !important;
+}
+
+/* Virtual */
+.dark #virtual{
+  background-color: #1B263A;
+}
+
+/* Testimonial */
+.dark #testimonial {
+  background: #021526 !important;
+}
+.dark #testimonial .card, .dark #testimonial .btn-light{
+  border: 1px solid #2E4057;
+  background-color: #1B263A !important;
+}
+.dark #testimonial .card h6{
+ color: #FFFFFF; 
+}
+.dark #testimonial .card p, .dark #testimonial .btn-light{
+  color: #CCCCCC;
 }

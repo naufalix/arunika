@@ -1,70 +1,9 @@
-<style>
-  #city{
-    /* background-color: #98DED9; */
-  }
-  #city .img-thumb{
-    position: relative;
-    transition: transform 0.5s ease-in-out;
-  }
-  #city .img-thumb:hover {
-    transform: scale(1.1); /* Membesarkan gambar saat di-hover */
-  }
-  #city .img-thumb:hover .custom-bg.bg-1{
-    width: 25% !important;
-  }
-  #city .img-thumb:hover .bg-2{
-    width: 20% !important;
-    left: 12% !important;
-  }
-  #city .img-thumb img{
-    width: 100%; object-fit: cover;
-  }
-  #city .custom-bg{
-    position: absolute;
-    height: -webkit-fill-available;
-    transition: all ease-in-out 0.4s;
-  }
-  .tag {
-    cursor: pointer;
-    align-content: center;
-    width: 100%;
-    height: 100%;
-    float: left;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: 1000;
-    /* background: linear-gradient(to bottom, transparent, #3B71CA); */
-    padding: 12px;
-    color: #FFFFFF;
-    font-weight: bold;
-  }
-  @media (max-width: 600px) {
-    .tag {
-      font-size: 12px !important;
-      line-height: normal;
-      padding: 8px !important;
-    }
-    #agenda .d-flex{
-      zoom: 80%;
-    }
-  }
-  #agenda{
-    background-color: #112942;
-  }
-  #agenda img{
-    max-width: 50px;
-    object-fit: cover;
-    aspect-ratio: 1/1;
-  }
-</style>
-
 <section id="city" class="py-5">
 
   <div class="container aos-init aos-animate" data-aos="fade-up">
     <div class="section-title aos-init aos-animate" data-aos="zoom-out">
-      <h5>Ensiklopedia</h5>
-      <h2 class="h2-bg">Lorem Ipsum</h2>
+      <h5 class="text-primary">Ensiklopedia</h5>
+      <h2 class="h-bg">Lorem Ipsum</h2>
       <p class="col-md-4 mx-auto">
         <i>Lorem Ipsum...</i>
       </p>
@@ -80,8 +19,10 @@
           <div class="row">
             <div class="col-12 col-md-6 d-flex">
               <div class="my-auto text-center text-md-start">
-                <h2 class="h1">{{ $c->name }}</h2>
-                <p class="col-12 col-md-10 ">{{ $c->description }}</p>
+                <div class="city-info">
+                  <h2 class="h1">{{ $c->name }}</h2>
+                  <p class="col-12 col-md-10 ">{{ $c->description }}</p>
+                </div>
                 <div class="d-flex mb-4">
                   <div class="mx-auto mx-md-0">
                     <button type="button" class="btn btn-primary" data-mdb-modal-init data-mdb-target="#info{{ $c->id }}">Infografis</button>
@@ -123,7 +64,7 @@
             </div>
             <div class="col-12 col-md-6">
               <div class="row mt-2">
-                @foreach ($c->encyclopedia as $e)
+                @foreach ($c->encyclopedia->sortBy('title') as $e)
                 <div class="col-6 mb-4">
                   <div class="img-thumb" data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#encyclopedia{{ $e->id }}">
                     <div class="tag rounded-4">{{ $e->title }}</div>
@@ -155,8 +96,10 @@
     <div class="modal fade" id="info{{ $c->id }}" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-          <div class="modal-header border-0 pb-0">
-            <button type="button" class="btn-close" data-mdb-ripple-init data-mdb-dismiss="modal" aria-label="Close"></button>
+          <div class="modal-header border-0 pb-0 d-flex">
+            <button class="ms-auto border-0" type="button" data-mdb-dismiss="modal" aria-label="Close">
+              <i class="bi bi-x-lg"></i>
+            </button>
           </div>
           <div class="modal-body pt-0">
             <div class="row">
@@ -192,8 +135,10 @@
       <div class="modal fade" id="encyclopedia{{ $e->id }}" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
           <div class="modal-content">
-            <div class="modal-header border-0 pb-0">
-              <button type="button" class="btn-close" data-mdb-ripple-init data-mdb-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-header border-0 pb-0 d-flex">
+              <button class="ms-auto border-0" type="button" data-mdb-dismiss="modal" aria-label="Close">
+                <i class="bi bi-x-lg"></i>
+              </button>
             </div>
             <div class="modal-body py-0">
               <div class="row">

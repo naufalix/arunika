@@ -53,9 +53,11 @@
       if (theme === 'nyx') {
         $('body').addClass('dark');
         $('.navbar').addClass('navbar-dark');
+        L.tileLayer.provider('Stadia.AlidadeSmoothDark').addTo(map);
       } else {
         $('body').removeClass('dark');
         $('.navbar').removeClass('navbar-dark');
+        L.tileLayer.provider('CyclOSM').addTo(map);
       }
       localStorage.setItem('theme', theme);
     }
@@ -67,6 +69,7 @@
         $('.navbar').addClass('navbar-dark');
         $('#day').css('display', 'none');
         $('#nyx').css('display', 'block');
+        L.tileLayer.provider('Stadia.AlidadeSmoothDark').addTo(map);
       } else {
         $('body').removeClass('dark');
         $('.navbar').removeClass('navbar-dark');

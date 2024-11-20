@@ -1,4 +1,4 @@
-<section id="hero" style="background: linear-gradient(to bottom left, #FFFFFF, #E2EAF7 );">
+<section id="hero">
   <div class="container p-4">
     <div class="row pt-5">
       <div class="col-12 col-md-6 my-auto py-5">

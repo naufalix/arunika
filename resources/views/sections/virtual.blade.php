@@ -1,84 +1,9 @@
-<style>
-  .swiper.mySwiper2 {
-    width: 100%;
-    padding-bottom: 50px;
-  }
-
-  .mySwiper2 .swiper-slide {
-    width: 300px;
-    height: 400px;
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
-    filter: blur(1px);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: self-start;
-  }
-
-  .mySwiper2 .swiper-slide-active {
-    filter: blur(0px);
-  }
-
-  .mySwiper2 .swiper-pagination-bullet,
-  .mySwiper2 .swiper-pagination-bullet-active {
-    background: #fff;
-  }
-
-  .mySwiper2 .swiper-slide span {
-    text-transform: uppercase;
-    color: #fff;
-    background: #1b7402;
-    padding: 7px 18px 7px 25px;
-    display: inline-block;
-    border-radius: 0 20px 20px 0px;
-    letter-spacing: 2px;
-    font-size: 0.8rem;
-    font-family: "Open Sans", sans-serif;
-  }
-
-  .mySwiper2 .swiper-slide span {
-    background: #3B71CA;
-  }
-
-  .mySwiper2 .swiper-slide h2 {
-    color: #fff;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 1.3rem;
-    line-height: 1.4;
-    margin-bottom: 15px;
-    padding: 25px 45px 0 25px;
-  }
-
-  .mySwiper2 .swiper-slide p {
-    color: #fff;
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    display: flex;
-    align-items: center;
-    padding: 0 25px 35px 25px;
-  }
-
-  .mySwiper2 .swiper-slide svg {
-    color: #fff;
-    width: 22px;
-    height: 22px;
-    margin-right: 7px;
-  }
-
-  .mySwiper2 .swiper-3d .swiper-slide-shadow-left,
-  .mySwiper2 .swiper-3d .swiper-slide-shadow-right {
-    background-image: none;
-  }
-</style>
-
-<section id="virtual" style="background-color: #021526">
+<section id="virtual">
   
   <div class="container aos-init aos-animate" data-aos="fade-up">
-    <div class="section-title text-white aos-init aos-animate" data-aos="zoom-out">
-      <h5>JELAJAHI</h5>
-      <h2>Tur Virtual Wisata Indonesia</h2>
+    <div class="section-title aos-init aos-animate" data-aos="zoom-out">
+      <h5 class="text-primary">JELAJAHI</h5>
+      <h2 class="h-bg">Tur Virtual Wisata Indonesia</h2>
       <p class="col-md-4 mx-auto">
         <i>Mari kita jelajahi keindahannya bersama...</i>
       </p>
@@ -120,40 +45,14 @@
       <div class="swiper-pagination"></div>
     </div>
 
-    <p class="fs-5 text-center pt-4 text-white mt-4 mb-0">
-      <i>...dan biarkan Indonesia meninggalkan kesan mendalam di perjalananmu.</i>
-    </p>
+    <div class="section-title aos-init aos-animate" data-aos="zoom-out">
+      <p class="fs-5 text-center pt-4 mt-4 mb-0">
+        <i>...dan biarkan Indonesia meninggalkan kesan mendalam di perjalananmu.</i>
+      </p>
+    </div>
     
   </div>
 </section>
-
-<style>
- 
-    #panorama {
-      height: 400px;
-    }
-    #modal-vr .btn-close{
-      position: absolute;
-      right: 0;
-      z-index: 2;
-    }
-    #modal-vr .gmaps{
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      z-index: 2;
-      font-size: 10px;
-      color: white;
-      background: #00000050;
-    }
-    #modal-vr .vr-close{
-      position: absolute;
-      right: 0;
-      z-index: 2;
-      color: white;
-      background: #00000050;
-    }
-</style>
 
 <!-- Modal -->
 <div class="modal fade" id="modal-vr" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
